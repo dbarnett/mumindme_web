@@ -1,26 +1,37 @@
 # [START gae_python37_app]
-from flask import Flask, redirect
+import logging
+
+from flask import Flask, redirect, render_template, url_for
 
 
 # If `entrypoint` is not defined in app.yaml, App Engine will look for an app
 # called `app` in `main.py`.
 app = Flask(__name__)
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 
 @app.route('/')
-def hello():
-    """Return a friendly HTTP greeting."""
-    return 'Hello World!'
+def home():
+    """Redirects to /projects."""
+    return redirect(url_for('projects'))
 
 @app.route('/projects')
 def projects():
-    """Redirect to a web-published Google Doc listing my projects for now."""
-    return redirect('https://docs.google.com/document/d/e/2PACX-1vT6-Cr6yG5NQ3Mb4CR02pkoDY3qIDpmaI_TvryNmSpPn3jNobguIYwfgE9F7UTZBpDGnZSepX6F_C1h/pub')
+    """Show projects page."""
+    return render_template('projects.html')
 
 @app.route('/blog')
 def blog():
     """Redirect to Diffing Diffs blog (the nerdy one)."""
     return redirect('https://diffingdiffs.blogspot.com')
+
+@app.errorhandler(500)
+def server_error(e):
+    logging.exception('An error occurred during a request.')
+    return """
+    An internal error occurred: <pre>{}</pre>
+    See logs for full stacktrace.
+    """.format(e), 500
 
 if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
