@@ -25,6 +25,11 @@ def blog():
     """Redirect to Diffing Diffs blog (the nerdy one)."""
     return redirect('https://diffingdiffs.blogspot.com')
 
+@app.route('/linkedin')
+def linkedin():
+    """Redirect to my LinkedIn profile."""
+    return redirect('https://www.linkedin.com/in/david-barnett-bb22b636/')
+
 @app.errorhandler(500)
 def server_error(e):
     logging.exception('An error occurred during a request.')
