@@ -90,7 +90,7 @@ Full tech stack [here](/techstack.md)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
-|[Flask](https://pypi.org/Flask)|v2.3.2|05/01/23|dependabot[bot] |BSD-3-Clause|N/A|
+|[Flask](https://pypi.org/project/Flask)|v2.3.2|05/01/23|dependabot[bot] |BSD-3-Clause|N/A|
 
 <br/>
 <div align='center'>

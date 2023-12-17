@@ -57,7 +57,7 @@ tools:
   last_updated_on: 2020-03-09 04:05:24.000000000 Z
 - name: Flask
   description: A simple framework for building complex web applications
-  package_url: https://pypi.org/Flask
+  package_url: https://pypi.org/project/Flask
   version: 2.3.2
   license: BSD-3-Clause
   open_source: true
