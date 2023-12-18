@@ -2,6 +2,10 @@
  * @type {import('next').NextConfig}
  */
 module.exports = {
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en'
+  },
   async redirects() {
     return [
       {
@@ -29,6 +33,6 @@ module.exports = {
         destination: 'https://www.goodreads.com/review/list/104875950-david-barnett',
         permanent: false,
       }
-    ]
+    ];
   },
-}
+};

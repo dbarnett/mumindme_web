@@ -12,11 +12,13 @@ export default function Layout({ children, home }) {
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="og:type" content="website" />
+        <meta name="og:title" content={siteTitle} />
         <meta
           name="description"
           content="Personal website with musings and portfolio stuff"
         />
-        <meta name="og:title" content={siteTitle} />
+        <meta name="og:image" content="/images/profile_wide.jpg" />
       </Head>
       <header className={styles.header}>
         {home ? (
