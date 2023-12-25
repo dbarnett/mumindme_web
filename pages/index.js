@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Date from '../components/date';
 import Layout, { siteTitle } from '../components/layout';
-import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 
 export async function getStaticProps() {
@@ -20,23 +19,23 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
+      <section className="text-xl">
         <p>I’m a software engineer and explorer.</p>
       </section>
       <section>
-        <ul className={utilStyles.list}>
-          <li className={utilStyles.listItem}><Link href="/projects">My projects</Link></li>
-          <li className={utilStyles.listItem}><Link href="/twitter">Twitter</Link></li>
+        <ul>
+          <li className="mb-4"><Link href="/projects">My projects</Link></li>
+          <li className="mb-4"><Link href="/twitter">Twitter</Link></li>
         </ul>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
+      <section className="text-xl p-1">
+        <h2 className="text-2xl font-bold my-4">Blog</h2>
+        <ul>
           {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
+            <li className="mb-4" key={id}>
               <Link href={`/posts/${id}`}>{title}</Link>
               <br />
-              <small className={utilStyles.lightText}>
+              <small className="text-gray-500">
                 <Date dateString={date} />
               </small>
             </li>

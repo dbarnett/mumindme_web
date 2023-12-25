@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
 
 export default function Projects() {
     return (
@@ -9,7 +8,7 @@ export default function Projects() {
             <Head>
                 <title>My projects</title>
             </Head>
-            <h1 className={utilStyles.headingX1}>My projects</h1>
+            <h1 className="text-3xl font-extrabold my-4">My projects</h1>
             <section>
                 <p>
                     I like to build things to help people be productive and fulfilled in
@@ -24,7 +23,7 @@ export default function Projects() {
                     Through my years working at Google I've been part of a few different
                     projects I'm proud of:
                 </p>
-                <ul>
+                <ul className="list-disc ps-10">
                     <li>
                         Enable Google products like Search and Photos to be delightfully fast,
                         secure, and beautiful in web browsers through next-gen web
@@ -118,7 +117,7 @@ export default function Projects() {
             </section>
             <section>
                 <h2>Community</h2>
-                <ul>
+                <ul className="list-disc ps-10">
                     <li>GitHub &mdash; See my development activity on <a href="https://github.com/dbarnett" target="_blank">my GitHub profile</a>.</li>
                     <li>StackOverflow &mdash; <a href="https://stackoverflow.com/users/307705/mu-mind?tab=profile"
                         target="_blank">Top 4% overall reputation</a> on the site for my technology questions &amp; answers.</li>
