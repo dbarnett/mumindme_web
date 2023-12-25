@@ -1,0 +1,16 @@
+{
+	"md": {
+		"scope": "markdown",
+		"prefix": "md",
+		"description": "Base markdown snippet with frontmatter",
+		"body": [
+			"---",
+			"title: '$TM_FILENAME_BASE'",
+			"date: '$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE'",
+			"tags: []",
+			"---",
+			"",
+			"$0"
+		]
+	}
+}
