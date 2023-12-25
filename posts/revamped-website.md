@@ -1,6 +1,7 @@
 ---
 title: 'Revamped personal website'
 date: '2023-12-17'
+tags: ['dev']
 ---
 
 I did a little overhaul of my personal website ([code](https://github.com/dbarnett/mumindme_web)),

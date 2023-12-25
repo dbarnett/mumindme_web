@@ -70,3 +70,7 @@
 
 @tailwind components;
 @tailwind utilities;
+
+.blogPost img {
+  max-width: 70%;
+}

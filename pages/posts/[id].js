@@ -13,7 +13,7 @@ export default function Post({ postData }) {
             <div className="text-gray-500">
                 <Date dateString={postData.date} />
             </div>
-            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+            <div className="blogPost" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </Layout>
     );
 }
