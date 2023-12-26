@@ -45,9 +45,7 @@ look... 🙄
 In fact, as soon as you hook up Tailwind it activates this ["preflight" thing] to specifically clear
 out any idea the browser might have had about how these things should look. Now whatever the bits of
 content may _mean_, they all just look like plain ’ol text:
-
-<img src="/images/posts/boring_unstyled_content_500.png">
-<!-- ![Screenshot of boring unstyled headings and list items](/images/posts/boring_unstyled_content_500.png) -->
+![Screenshot of boring unstyled headings and list items](/images/posts/boring_unstyled_content_500.png)
 
 Alright, fine, let’s not have a global "way a list item should look", but when I inject some
 completely unstyled blog post content into the blog post page on my site can I at least give that
