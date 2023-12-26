@@ -1,8 +1,6 @@
 # mumind.me web
 
-Web app serving mumind.me (nodejs version, currently just copy-paste sample
-app).
+Web app serving mumind.me, using Next.js.
 
-Based on
-https://www.frontendeng.dev/blog/6-deploying-nextjs-app-on-cloud-run-ci-cd and
+Initially based on https://www.frontendeng.dev/blog/6-deploying-nextjs-app-on-cloud-run-ci-cd and
 https://nextjs.org/learn-pages-router/basics/data-fetching.
