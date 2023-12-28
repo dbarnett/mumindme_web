@@ -37,8 +37,8 @@ export default function Projects() {
           </li>
         </ul>
         <h3>Vim@Google</h3>
-        <div className="flex flex-row">
-          <div className="flex-1 mr-2">
+        <div className="flex flex-row flex-wrap gap-x-2">
+          <div className="flex-grow basis-1/2">
             <p className="mt-0">
               I've built/maintained some tools for writing code in the vim editor,
               to help with things like automatically fixing formatting and invoking
@@ -57,7 +57,7 @@ export default function Projects() {
             height={239}
             title="vim-codefmt plugin in action"
             alt="Screenshot of command from vim-codefmt plugin being invoked"
-            className="flex-1" />
+            className="flex-initial" />
         </div>
       </section>
       <section>
@@ -78,8 +78,8 @@ export default function Projects() {
           I’ve built some little projects with my kids using Scratch, finding creative ways to deal
           with its limitations and demonstrate programming concepts.
         </p>
-        <div className="flex flex-row-reverse">
-          <p className="flex-1 mt-0 ml-2">
+        <div className="flex flex-row flex-wrap gap-x-2">
+          <p className="flex-grow basis-1/2 mt-0">
             For instance, <a href="https://scratch.mit.edu/projects/368852755">Scratch defly.io
             </a> is a clone of parts of the online game <a href="https://defly.io">defly.io</a> I
             recreated in Scratch as a learning exercise with an elementary schooler.
@@ -90,7 +90,7 @@ export default function Projects() {
             height={224}
             title="Scratch defly.io in Scratch"
             alt="Screenshot of the &quot;Scratch defly.io&quot; project in Scratch Studio"
-            className="flex-1" />
+            className="flex-initial" />
         </div>
       </section>
       <section>
