@@ -1,13 +1,13 @@
-import Head from 'next/head';
 import Image from 'next/image';
-import Layout from "../components/layout";
+import Layout from "../../components/layout";
+
+export const metadata = {
+  title: 'My projects',
+};
 
 export default function Projects() {
   return (
     <Layout>
-      <Head>
-        <title>My projects</title>
-      </Head>
       <h1 className="text-3xl font-extrabold my-4">My projects</h1>
       <section>
         <p>

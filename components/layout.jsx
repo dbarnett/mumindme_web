@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -8,16 +7,6 @@ export const siteTitle = `MuMind (${name}) personal website`;
 export default function Layout({ children, home }) {
   return (
     <div className="max-w-3xl px-4 mt-12 mb-24 mx-auto">
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="og:type" content="website" />
-        <meta name="og:title" content={siteTitle} />
-        <meta
-          name="description"
-          content="Personal website with musings and portfolio stuff"
-        />
-        <meta name="og:image" content="/images/profile_wide.jpg" />
-      </Head>
       <header className="flex flex-col items-center">
         {home ? (
           <>
