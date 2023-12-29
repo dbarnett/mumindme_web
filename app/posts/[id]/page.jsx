@@ -1,7 +1,7 @@
-import Date from '../../../components/date';
-import Layout from "../../../components/layout";
-import {cache} from 'react';
-import { getAllPostIds, getPostData } from "../../../lib/posts";
+import Date from '@/components/date';
+import Layout from "@/components/layout";
+import { cache } from 'react';
+import { getAllPostIds, getPostData } from "@/lib/posts";
 
 const getPostDataCached = cache(getPostData);
 

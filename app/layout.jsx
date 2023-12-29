@@ -1,4 +1,4 @@
-import '../styles/global.css';
+import '@/styles/global.css';
 
 export const metadata = {
   metadataBase: new URL('https://mumind.me'),

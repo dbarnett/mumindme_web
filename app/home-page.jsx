@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import Date from '../components/date';
-import Layout from '../components/layout';
+import Date from '@/components/date';
+import Layout from '@/components/layout';
 
 export default function HomePage({ recentPosts }) {
   return (

@@ -1,6 +1,6 @@
 import HomePage from './home-page';
-import { siteTitle } from '../components/layout';
-import { getSortedPostsData } from '../lib/posts';
+import { siteTitle } from '@/components/layout';
+import { getSortedPostsData } from '@/lib/posts';
 
 export const metadata = {
   title: siteTitle,
