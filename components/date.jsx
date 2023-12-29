@@ -1,6 +1,12 @@
-import { format, parseISO } from "date-fns";
+'use client';
+
+import { useContext } from "react";
+import { parseISO } from "date-fns";
+import { I18nContext } from '@/components/i18n-provider';
 
 export default function Date({ dateString }) {
+  const { locale } = useContext(I18nContext);
   const date = parseISO(dateString);
-  return <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>;
+  const formatter = new Intl.DateTimeFormat(locale, { dateStyle: 'medium' });
+  return <time dateTime={dateString}>{formatter.format(date)}</time>;
 }

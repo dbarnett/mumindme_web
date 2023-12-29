@@ -6,8 +6,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "^0.5.2",
     "date-fns": "^2.30.0",
     "gray-matter": "^4.0.3",
+    "negotiator": "^0.6.3",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",

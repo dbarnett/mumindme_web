@@ -1,13 +1,17 @@
+'use client';
+
 import Image from 'next/image';
-import Link from 'next/link';
+import LangSelector from '@/components/lang-selector';
+import Link from '@/components/link';
+import T from '@/components/t';
 
 const name = 'David B';
-export const siteTitle = `MuMind (${name}) personal website`;
 
-export default function Layout({ children, home }) {
+export default function AppLayout({ children, home, ...props }) {
   return (
     <div className="max-w-3xl px-4 mt-12 mb-24 mx-auto">
-      <header className="flex flex-col items-center">
+      <header className="relative flex flex-col items-center">
+        <LangSelector className="absolute top-0 right-0" />
         {home ? (
           <>
             <Image
@@ -40,10 +44,10 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
-      <main>{children}</main>
+      <main {...props}>{children}</main>
       {!home && (
         <div className="mt-8">
-          <Link href="/">← Back to home</Link>
+          <Link href="/">← <T>Back to home</T></Link>
         </div>
       )}
     </div>
