@@ -22,7 +22,7 @@ export default function HomePage({ recentPosts }) {
         <ul>
           {recentPosts.map(({ id, date, title }) => (
             <li className="mb-4" key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
+              <Link href={`/posts/${id}`}><T>{title}</T></Link>
               <br />
               <small className="text-gray-500">
                 <Date dateString={date} />

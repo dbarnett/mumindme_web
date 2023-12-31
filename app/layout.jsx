@@ -18,7 +18,7 @@ export function generateMetadata() {
 export default function RootLayout({
   children,
 }) {
-  // TODO: Only use selected locale if supported by page.
+  // TODO: #7 - Only use selected locale if supported by page?
   const locale = headers().get('x-selected-locale');
   return (
     <I18nProvider locale={locale}>
