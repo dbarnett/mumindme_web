@@ -76,8 +76,8 @@ own auto-translations for untranslated sections of the page.
 I was also hoping to upgrade from my own one-off solution to some existing i18n tooling. Or maybe
 factor out my own tooling if I can’t find any existing solution that works quite how I want? I did
 find one called [Ni18n] (mentioned in
-https://iamsannyrai.medium.com/i18n-in-next-js-without-sub-path-or-domain-routing-2443c1a349c6) that
-looks like it might be pretty close to the functionality I was looking for.
+<https://iamsannyrai.medium.com/i18n-in-next-js-without-sub-path-or-domain-routing-2443c1a349c6>)
+that looks like it might be pretty close to the functionality I was looking for.
 
 Those and I dumped a [list of various other improvement
 ideas](https://github.com/dbarnett/mumindme_web/issues/7#issuecomment-1873059045) to look into

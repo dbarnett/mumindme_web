@@ -74,3 +74,8 @@
 .blogPost img {
   max-width: 70%;
 }
+
+.blogPost ul {
+  @apply list-disc;
+  @apply ps-10;
+}
