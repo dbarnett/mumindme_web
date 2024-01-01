@@ -14,7 +14,7 @@ export default function HomePage({ recentPosts }) {
       <section>
         <ul>
           <li className="mb-4"><Link href="/projects"><T>My projects</T></Link></li>
-          <li className="mb-4"><Link href="/twitter">Twitter</Link></li>
+          <li className="mb-4"><a href="/twitter">Twitter</a></li>
         </ul>
       </section>
       <section className="text-xl p-1">
