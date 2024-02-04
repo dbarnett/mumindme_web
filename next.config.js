@@ -11,7 +11,7 @@ module.exports = {
       },
       {
         source: '/linkedin',
-        destination: 'https://www.linkedin.com/in/david-barnett-bb22b636/',
+        destination: 'https://www.linkedin.com/in/david-e-barnett',
         permanent: false,
       },
       {
