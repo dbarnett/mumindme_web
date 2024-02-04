@@ -76,6 +76,9 @@
 }
 
 .blogPost ul {
-  @apply list-disc;
-  @apply ps-10;
+  @apply list-disc ps-10;
+}
+
+.blogPost pre {
+  @apply overflow-x-auto rounded;
 }

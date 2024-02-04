@@ -7,7 +7,7 @@ tags: ['dev']
 I spent a little time hooking up [Tailwind] to the site and cleaning up some of the boilerplate
 styles I copy-pasted (code: [dbarnett/mumindme_web@2fec823]). I can’t argue that the utility classes
 are way simpler and less hassle than some of the awkward styles I copy-pasted. For example, instead
-of having in one layout.js file
+of having in one layout.jsx file
 
 ```jsx
 import styles from './layout.module.css';
