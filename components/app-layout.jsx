@@ -26,7 +26,7 @@ export default function AppLayout({ children, home, ...props }) {
           </>
         ) : (
           <>
-            <Link href="/">
+            <Link href="/" prefetch={true}>
               <Image
                 priority
                 src="/images/profile.jpg"
@@ -37,7 +37,7 @@ export default function AppLayout({ children, home, ...props }) {
               />
             </Link>
             <h2 className="text-2xl font-bold my-4">
-              <Link href="/" className="text-inherit">
+              <Link href="/" prefetch={true} className="text-inherit">
                 MuMind ({name})
               </Link>
             </h2>
@@ -47,7 +47,7 @@ export default function AppLayout({ children, home, ...props }) {
       <main {...props}>{children}</main>
       {!home && (
         <div className="mt-8">
-          <Link href="/">← <T>Back to home</T></Link>
+          <Link href="/" prefetch={true}>← <T>Back to home</T></Link>
         </div>
       )}
     </div>

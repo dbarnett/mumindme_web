@@ -13,7 +13,7 @@ export default function HomePage({ recentPosts }) {
       </section>
       <section>
         <ul>
-          <li className="mb-4"><Link href="/projects"><T>My projects</T></Link></li>
+          <li className="mb-4"><Link href="/projects" prefetch={true}><T>My projects</T></Link></li>
           <li className="mb-4"><a href="/twitter">Twitter</a></li>
         </ul>
       </section>
@@ -22,7 +22,7 @@ export default function HomePage({ recentPosts }) {
         <ul>
           {recentPosts.map(({ id, date, title }) => (
             <li className="mb-4" key={id}>
-              <Link href={`/posts/${id}`}><T>{title}</T></Link>
+              <Link href={`/posts/${id}`} prefetch={true}><T>{title}</T></Link>
               <br />
               <small className="text-gray-500">
                 <Date dateString={date} />
