@@ -79,6 +79,10 @@
   @apply list-disc ps-10;
 }
 
+.blogPost ol {
+  @apply list-decimal ps-10;
+}
+
 .blogPost pre {
   @apply overflow-x-auto rounded;
 }
