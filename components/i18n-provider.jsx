@@ -14,6 +14,11 @@ export default function I18nProvider({ locale, children }) {
   const router = useRouter();
   const pathName = usePathname();
   const searchParams = useSearchParams();
+
+  // Sync locale prop changes from server with state
+  if (locale !== stateLocale) {
+    setLocaleStr(locale);
+  }
   const setLocale = (locale) => {
     setLocaleStr(locale);
     const newParams = updateSearchParams(searchParams, { 'hl': locale });
