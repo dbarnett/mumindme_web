@@ -4,7 +4,7 @@ import { t } from '@/lib/app-messages';
 import ProjectsPage from './projects-page';
 
 export async function generateMetadata() {
-  const locale = getSelectedLocale(headers());
+  const locale = getSelectedLocale(await headers());
   return {
     title: t('My projects', locale),
   };

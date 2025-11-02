@@ -5,7 +5,7 @@ import { siteTitle, t } from '@/lib/app-messages';
 import HomePage from './home-page';
 
 export async function generateMetadata() {
-  const locale = getSelectedLocale(headers());
+  const locale = getSelectedLocale(await headers());
   return {
     title: t(siteTitle, locale),
   };

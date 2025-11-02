@@ -4,8 +4,8 @@ import HtmlLayout from '@/components/html-layout';
 import I18nProvider from '@/components/i18n-provider';
 import '@/styles/global.css';
 
-export function generateMetadata() {
-  const locale = headers().get('x-selected-locale');
+export async function generateMetadata() {
+  const locale = (await headers()).get('x-selected-locale');
   return {
     metadataBase: new URL('https://mumind.me'),
     description: t('Personal website with musings and portfolio stuff', locale),
@@ -15,11 +15,11 @@ export function generateMetadata() {
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }) {
   // TODO: #7 - Only use selected locale if supported by page?
-  const locale = headers().get('x-selected-locale');
+  const locale = (await headers()).get('x-selected-locale');
   return (
     <I18nProvider locale={locale}>
       <HtmlLayout>
