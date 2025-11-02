@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { updateSearchParams } from "@/lib/urls";
 
@@ -26,9 +26,11 @@ export default function I18nProvider({ locale, children }: I18nProviderProps) {
   const searchParams = useSearchParams();
 
   // Sync locale prop changes from server with state
-  if (locale !== stateLocale) {
-    setLocaleStr(locale);
-  }
+  useEffect(() => {
+    if (locale !== stateLocale) {
+      setLocaleStr(locale);
+    }
+  }, [locale, stateLocale]);
   const setLocale = (locale: string) => {
     setLocaleStr(locale);
     const newParams = updateSearchParams(searchParams, { 'hl': locale });
