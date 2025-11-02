@@ -3,3 +3,7 @@
 node_modules/
 .next/
 /out/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts

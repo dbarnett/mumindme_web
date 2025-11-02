@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { headers } from 'next/headers';
 import { t } from '@/lib/app-messages';
 import HtmlLayout from '@/components/html-layout';
@@ -15,9 +16,11 @@ export async function generateMetadata() {
   };
 }
 
-export default async function RootLayout({
-  children,
-}) {
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+export default async function RootLayout({ children }: RootLayoutProps) {
   // TODO: #7 - Only use selected locale if supported by page?
   const locale = (await headers()).get('x-selected-locale');
   return (

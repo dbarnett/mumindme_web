@@ -5,7 +5,10 @@
  * actual updates performed, so you can use instance equality (===) to shortcut
  * other related operations.
  */
-export function updateSearchParams(searchParams, newParams) {
+export function updateSearchParams(
+  searchParams: URLSearchParams,
+  newParams: Record<string, string>
+): URLSearchParams {
   const params = new URLSearchParams(searchParams);
   let didUpdate = false;
   Object.entries(newParams).forEach(([key, value]) => {

@@ -3,8 +3,13 @@
 import Date from '@/components/date';
 import AppLayout from "@/components/app-layout";
 import T from '@/components/t';
+import { PostData } from '@/lib/posts';
 
-export default function PostPage({ postData }) {
+interface PostPageProps {
+  postData: PostData;
+}
+
+export default function PostPage({ postData }: PostPageProps) {
   return (
     <AppLayout>
       <h1 className="text-3xl font-extrabold my-4"><T>{postData.title}</T></h1>

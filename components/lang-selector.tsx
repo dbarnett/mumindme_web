@@ -1,11 +1,11 @@
 'use client';
 
-import { useContext } from 'react';
+import { HTMLAttributes, useContext } from 'react';
 import { I18nContext } from '@/components/i18n-provider';
 
-export default function LangSelector({
-  ...props
-}) {
+type LangSelectorProps = HTMLAttributes<HTMLDivElement>;
+
+export default function LangSelector(props: LangSelectorProps) {
   const { setLocale } = useContext(I18nContext);
   return (
     <div {...props}>

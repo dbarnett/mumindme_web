@@ -3,14 +3,20 @@ import { getLocaleLang } from "@/lib/locales";
 const name = 'David B';
 export const siteTitle = `MuMind (${name}) personal website`;
 
-const translationMap = {
+type TranslationMap = {
+  [key: string]: {
+    [lang: string]: string;
+  };
+};
+
+const translationMap: TranslationMap = {
   [siteTitle]: {
     es: `MuMind (${name}), sitio web personal`,
   },
   'Personal website with musings and portfolio stuff': {
     es: 'Sitio web personal con reflexiones y material de portafolio',
   },
-  'I’m a software engineer and explorer.': {
+  "I’m a software engineer and explorer.": {
     es: 'Soy ingeniero de software y explorador.',
   },
   'My projects': {
@@ -34,7 +40,7 @@ const translationMap = {
   }
 };
 
-export function t(message, locale) {
+export function t(message: string, locale: string | null): string {
   // TODO: #7 - Tag returned strings with a fallback signal in fallback case?
-  return translationMap[message]?.[getLocaleLang(locale)] ?? message;
+  return translationMap[message]?.[getLocaleLang(locale ?? 'en')] ?? message;
 }

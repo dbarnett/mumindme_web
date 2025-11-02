@@ -1,5 +1,6 @@
 'use client';
 
+import { ReactNode } from 'react';
 import Image from 'next/image';
 import LangSelector from '@/components/lang-selector';
 import Link from '@/components/link';
@@ -7,7 +8,13 @@ import T from '@/components/t';
 
 const name = 'David B';
 
-export default function AppLayout({ children, home, ...props }) {
+interface AppLayoutProps {
+  children: ReactNode;
+  home?: boolean;
+  [key: string]: any; // For ...props spread
+}
+
+export default function AppLayout({ children, home, ...props }: AppLayoutProps) {
   return (
     <div className="max-w-3xl px-4 mt-12 mb-24 mx-auto">
       <header className="relative flex flex-col items-center">

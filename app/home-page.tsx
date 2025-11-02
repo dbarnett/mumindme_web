@@ -4,8 +4,13 @@ import AppLayout from '@/components/app-layout';
 import Date from '@/components/date';
 import Link from '@/components/link';
 import T from '@/components/t';
+import { PostMetadata } from '@/lib/posts';
 
-export default function HomePage({ recentPosts }) {
+interface HomePageProps {
+  recentPosts: PostMetadata[];
+}
+
+export default function HomePage({ recentPosts }: HomePageProps) {
   return (
     <AppLayout home>
       <section className="text-xl">

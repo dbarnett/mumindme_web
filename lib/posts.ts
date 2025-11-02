@@ -9,11 +9,22 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import {unified} from 'unified';
 
+export interface PostMetadata {
+  id: string;
+  title: string;
+  date: string;
+  tags: string[];
+}
+
+export interface PostData extends PostMetadata {
+  contentHtml: string;
+}
+
 const postsDirectory = path.join(process.cwd(), 'posts');
 
-export function getSortedPostsData() {
+export function getSortedPostsData(): PostMetadata[] {
   const filenames = fs.readdirSync(postsDirectory);
-  const allPostsData = filenames.map((filename) => {
+  const allPostsData = filenames.map((filename): PostMetadata => {
     const id = filename.replace(/\.md$/, '');
 
     const fullPath = path.join(postsDirectory, filename);
@@ -23,7 +34,7 @@ export function getSortedPostsData() {
 
     return {
       id,
-      ...matterResult.data,
+      ...(matterResult.data as Omit<PostMetadata, 'id'>),
     };
   });
   return allPostsData.sort((a, b) => {
@@ -35,7 +46,7 @@ export function getSortedPostsData() {
   });
 }
 
-export function getAllPostIds() {
+export function getAllPostIds(): { id: string }[] {
   const filenames = fs.readdirSync(postsDirectory);
   return filenames.map((fname) => {
     return {
@@ -44,7 +55,7 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(id) {
+export async function getPostData(id: string): Promise<PostData> {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -61,6 +72,6 @@ export async function getPostData(id) {
   return {
     id,
     contentHtml,
-    ...matterResult.data,
+    ...(matterResult.data as Omit<PostMetadata, 'id'>),
   };
 }
