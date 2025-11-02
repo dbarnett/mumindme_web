@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, ReactNode, useEffect, useState } from "react";
+import { createContext, ReactNode } from "react";
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { updateSearchParams } from "@/lib/urls";
 
@@ -20,20 +20,12 @@ interface I18nProviderProps {
 }
 
 export default function I18nProvider({ locale, children }: I18nProviderProps) {
-  const [stateLocale, setLocaleStr] = useState(locale);
   const router = useRouter();
   const pathName = usePathname();
   const searchParams = useSearchParams();
 
-  // Sync locale prop changes from server with state
-  useEffect(() => {
-    if (locale !== stateLocale) {
-      setLocaleStr(locale);
-    }
-  }, [locale, stateLocale]);
-  const setLocale = (locale: string) => {
-    setLocaleStr(locale);
-    const newParams = updateSearchParams(searchParams, { 'hl': locale });
+  const setLocale = (newLocale: string) => {
+    const newParams = updateSearchParams(searchParams, { 'hl': newLocale });
     if (newParams !== searchParams) {
       router.replace(
         `${pathName}?${newParams.toString()}`,
@@ -42,7 +34,7 @@ export default function I18nProvider({ locale, children }: I18nProviderProps) {
   };
 
   return (
-    <I18nContext.Provider value={{ locale: stateLocale, setLocale }}>
+    <I18nContext.Provider value={{ locale, setLocale }}>
       {children}
     </I18nContext.Provider>
   );
