@@ -17,7 +17,7 @@ export default function ProjectsPage() {
         <h2>Work projects 💼</h2>
         <h3>Google products</h3>
         <p>
-          Through my years working at Google I've been part of a few different projects I'm proud
+          Through my years working at Google I&apos;ve been part of a few different projects I&apos;m proud
           of:
         </p>
         <ul className="list-disc ps-10">
@@ -38,7 +38,7 @@ export default function ProjectsPage() {
         <div className="flex flex-row flex-wrap gap-x-2">
           <div className="flex-grow basis-1/2">
             <p className="mt-0">
-              I've built/maintained some tools for writing code in the vim editor,
+              I&apos;ve built/maintained some tools for writing code in the vim editor,
               to help with things like automatically fixing formatting and invoking
               build tools.
             </p>

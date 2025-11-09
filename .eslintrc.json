@@ -1,0 +1,16 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "negotiator",
+            "message": "Do not use 'negotiator' - it's incompatible with Edge Runtime. Use 'accept-language-parser' instead. See lib/locales.ts for the correct implementation."
+          }
+        ]
+      }
+    ]
+  }
+}
