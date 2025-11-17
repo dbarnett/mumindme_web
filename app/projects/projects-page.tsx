@@ -14,33 +14,68 @@ export default function ProjectsPage() {
         </p>
       </section>
       <section>
-        <h2>Work projects 💼</h2>
-        <h3>Google products</h3>
+        <h2>Recent Projects ⚡</h2>
+        <h3>Obsidian FIT - File gIT</h3>
         <p>
-          Through my years working at Google I've been part of a few different projects I'm proud
-          of:
+          My biggest recent work has been maintaining and improving{' '}
+          <a href="https://github.com/joshuakto/fit">FIT (File gIT)</a>, a plugin for the{' '}
+          <a href="https://obsidian.md/">Obsidian</a> note-taking app that syncs your vault to GitHub.
+          I took over maintenance from the original author and have massively improved it to squash bugs,
+          boost performance, and make it much friendlier to use.
         </p>
-        <ul className="list-disc ps-10">
-          <li>
-            Enable Google products like Search and Photos to be delightfully fast, secure, and
-            beautiful in web browsers through next-gen web technologies.
-          </li>
-          <li>
-            <a href="https://support.google.com/families/answer/7103338">Supervised child
-            accounts</a> to allow younger users to get what they need from products they use.
-          </li>
-          <li>
-            <a href="https://workspace.google.com/">Google Workspace</a> to help teams collaborate
-            together at work.
-          </li>
-        </ul>
+        <p>
+          The plugin now has over <strong>38,000 downloads</strong> and stands out from alternatives with
+          excellent mobile sync support on both iOS and Android. It's become an essential tool for
+          thousands of Obsidian users who want reliable, Git-based backup and sync.
+        </p>
+        <p>
+          <a href="https://github.com/joshuakto/fit">View on GitHub →</a>
+        </p>
+        <h3>Spice of Life - Hackathon Game 🎮</h3>
+        <p>
+          A fun browser-based game I created with a friend during a hackathon. Try it out right here!
+        </p>
+        <div className="my-4 border-2 border-gray-300 rounded-lg overflow-hidden">
+          <iframe
+            src="https://dbarnett.github.io/spice-of-life/"
+            width="100%"
+            height="600"
+            title="Spice of Life Game"
+            className="border-0"
+          />
+        </div>
+        <p>
+          <a href="https://github.com/dbarnett/spice-of-life">View source on GitHub →</a>
+        </p>
+      </section>
+      <section>
+        <h2>Vim Development Tools 🛠️</h2>
+        <h3>vim-plugin-metadata</h3>
+        <p>
+          A project I'm particularly proud of that uses{' '}
+          <a href="https://tree-sitter.github.io/tree-sitter/">Tree-sitter</a> and its Rust interface
+          to parse and analyze VimScript. It provides Python bindings via{' '}
+          <a href="https://pyo3.rs/">PyO3</a>, enabling sophisticated static analysis of Vim plugins
+          from Python code.
+        </p>
+        <p>
+          This was a fun exploration of the Rust/Python interop ecosystem and tree-sitter's powerful
+          parsing capabilities.
+        </p>
+        <p>
+          <a href="https://github.com/dbarnett/vim-plugin-metadata">View on GitHub →</a>
+        </p>
         <h3>Vim@Google</h3>
         <div className="flex flex-row flex-wrap gap-x-2">
           <div className="flex-grow basis-1/2">
             <p className="mt-0">
-              I've built/maintained some tools for writing code in the vim editor,
-              to help with things like automatically fixing formatting and invoking
-              build tools.
+              I built and maintained tools for writing code in the Vim editor at Google,
+              helping with things like automatically fixing formatting and invoking build tools.
+            </p>
+            <p>
+              <strong>Note:</strong> These projects are largely unmaintained now, as only Google employees
+              can review and accept contributions and they're no longer actively maintaining them.
+              However, they're still used by many developers.
             </p>
             <p>
               See projects at <a href="https://github.com/orgs/google/teams/vim/repositories">GitHub
@@ -57,6 +92,27 @@ export default function ProjectsPage() {
             alt="Screenshot of command from vim-codefmt plugin being invoked"
             className="flex-initial" />
         </div>
+      </section>
+      <section>
+        <h2>Past Work 💼</h2>
+        <h3>Google</h3>
+        <p>
+          Through my years at Google I was part of several projects I'm proud of:
+        </p>
+        <ul className="list-disc ps-10">
+          <li>
+            Enabled Google products like Search and Photos to be delightfully fast, secure, and
+            beautiful in web browsers through next-gen web technologies.
+          </li>
+          <li>
+            <a href="https://support.google.com/families/answer/7103338">Supervised child
+            accounts</a> to allow younger users to get what they need from products they use.
+          </li>
+          <li>
+            <a href="https://workspace.google.com/">Google Workspace</a> to help teams collaborate
+            together at work.
+          </li>
+        </ul>
       </section>
       <section>
         <h2>Fun stuff 😄</h2>
