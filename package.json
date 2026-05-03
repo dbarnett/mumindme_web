@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.2",
+    "bluesky-comments": "^0.13.1",
     "date-fns": "^2.30.0",
     "gray-matter": "^4.0.3",
     "negotiator": "^0.6.3",

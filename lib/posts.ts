@@ -14,6 +14,7 @@ export interface PostMetadata {
   title: string;
   date: string;
   tags: string[];
+  blueskyUri?: string;
 }
 
 export interface PostData extends PostMetadata {
@@ -34,7 +35,8 @@ export function getSortedPostsData(): PostMetadata[] {
 
     return {
       id,
-      ...(matterResult.data as Omit<PostMetadata, 'id'>),
+      ...(matterResult.data as Omit<PostMetadata, 'id' | 'blueskyUri'>),
+      blueskyUri: matterResult.data.bluesky_uri,
     };
   });
   return allPostsData.sort((a, b) => {
@@ -72,6 +74,7 @@ export async function getPostData(id: string): Promise<PostData> {
   return {
     id,
     contentHtml,
-    ...(matterResult.data as Omit<PostMetadata, 'id'>),
+    ...(matterResult.data as Omit<PostMetadata, 'id' | 'blueskyUri'>),
+    blueskyUri: matterResult.data.bluesky_uri,
   };
 }
