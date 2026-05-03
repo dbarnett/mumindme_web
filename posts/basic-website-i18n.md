@@ -2,6 +2,7 @@
 title: 'Basic website i18n'
 date: '2024-02-03'
 tags: ['dev', 'i18n']
+bluesky_uri: 'https://bsky.app/profile/did:plc:tgrzgew7bsrkkro4i6x3yqm5/post/3mkwaungov22d'
 ---
 
 I recently developed a little obsession with [adding basic i18n to this
