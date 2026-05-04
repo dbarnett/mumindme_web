@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="enchantment-title enchantment-desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 58 240 205" role="img" aria-labelledby="enchantment-title enchantment-desc">
   <title id="enchantment-title">The Enchantment - Single Helpful Broom</title>
   <desc id="enchantment-desc">A single magical broom standing upright with anthropomorphic arms carrying two water buckets. The broom has a thick bundle of bristles cinched at the bottom in the old-timey style. Golden sparkles float around it gently, pulsing softly. The background is calm and peaceful. Below, text reads "The magic works" with a sparkle emoji. The broom looks helpful and controlled - one assistant doing exactly what you need.</desc>
 
@@ -9,140 +9,75 @@
       <stop offset="100%" style="stop-color:#5a4a3a;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="water-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#67e8f9;stop-opacity:0.7" />
-      <stop offset="100%" style="stop-color:#22d3ee;stop-opacity:0.8" />
+      <stop offset="0%" style="stop-color:#67e8f9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22d3ee;stop-opacity:1" />
     </linearGradient>
+
+    <symbol id="bucket" overflow="visible">
+      <path d="M -10,-3 Q 0,-6 10,-3 L 10,8 Q 10,14 0,14 Q -10,14 -10,8 Z" fill="url(#bucket-gradient)"/>
+      <line x1="-7" y1="-3" x2="-7" y2="13" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="-3" y1="-3" x2="-3" y2="14" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="0" y1="-3" x2="0" y2="14" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="3" y1="-3" x2="3" y2="14" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="7" y1="-3" x2="7" y2="13" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <ellipse cx="0" cy="-1" rx="8.5" ry="2" fill="url(#water-gradient)">
+        <animate attributeName="rx" values="8.5;7.5;8.5;9;8.5" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="2;2.8;2;1.5;2" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="-1;-1.5;-1;-0.5;-1" dur="2s" repeatCount="indefinite"/>
+      </ellipse>
+      <path d="M -10,-3 Q 0,-13 10,-3" stroke="#6b7280" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="-10" cy="-3" r="1.5" fill="#4b5563"/>
+      <circle cx="10" cy="-3" r="1.5" fill="#4b5563"/>
+    </symbol>
+
+    <symbol id="broom-enchantment" overflow="visible">
+      <!-- Handle and arms -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" values="0 0 20; 2.5 0 20; 0 0 20; -2.5 0 20; 0 0 20" dur="2.5s" repeatCount="indefinite"/>
+        <rect x="-4" y="-80" width="8" height="100" fill="#8b4513" rx="3"/>
+        <!-- Left arm -->
+        <path d="M -4,-40 Q -16,-35 -25,-25" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M -25,-25 L -28,-18" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <!-- Right arm -->
+        <path d="M 4,-40 Q 16,-35 25,-25" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M 25,-25 L 28,-18" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+      </g>
+      <!-- Besom (in front of handle) -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" values="0 0 11; -4 0 11; 0 0 11; 4 0 11; 0 0 11" dur="2.5s" repeatCount="indefinite"/>
+        <path d="M -10,3 L -8,6 L -6.5,9 L -6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+        <path d="M -7,3 L -6,6 L -4.5,9 L -4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
+        <path d="M -4,3 L -3.5,6 L -2.5,9 L -2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+        <path d="M 4,3 L 3.5,6 L 2.5,9 L 2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+        <path d="M 7,3 L 6,6 L 4.5,9 L 4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
+        <path d="M 10,3 L 8,6 L 6.5,9 L 6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+        <path d="M -8.5,3 L -7,6 L -5.5,9 L -5,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+        <path d="M -5.5,3 L -5,6 L -3.5,9 L -3,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+        <path d="M -1,3 L -1,6 L -0.5,9 L 0,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+        <path d="M 1,3 L 1,6 L 0.5,9 L 0,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+        <path d="M 5.5,3 L 5,6 L 3.5,9 L 3,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+        <path d="M 8.5,3 L 7,6 L 5.5,9 L 5,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+        <rect x="-7" y="8" width="14" height="6" fill="#654321" rx="1"/>
+        <path d="M -7,14 L -10,20 L -12,28 L -10,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+        <path d="M -5,14 L -7,20 L -9,28 L -7,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+        <path d="M -3,14 L -4,20 L -6,28 L -4,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+        <path d="M 3,14 L 4,20 L 6,28 L 4,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+        <path d="M 5,14 L 7,20 L 9,28 L 7,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+        <path d="M 7,14 L 10,20 L 12,28 L 10,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+        <path d="M -1,14 L -2,20 L -3,28 L -2,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+        <path d="M 1,14 L 2,20 L 3,28 L 2,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      </g>
+      <!-- Buckets (in front of besom) -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" values="0 0 20; 2.5 0 20; 0 0 20; -2.5 0 20; 0 0 20" dur="2.5s" repeatCount="indefinite"/>
+        <use href="#bucket" transform="translate(-26, -7)"/>
+        <use href="#bucket" transform="translate(26, -7)"/>
+      </g>
+    </symbol>
   </defs>
 
   <!-- Calm background -->
   <rect width="400" height="300" fill="#f1f5f9"/>
-
-  <!-- TODO: Arms are a little wide / weirdly shaped (paths extend too far out at -35/-38 x) -->
-  <!-- TODO: Buckets slosh but less noticeably than partial-mastery — increase rx/ry swing range -->
-  <!-- Helpful broom with arms -->
-  <g transform="translate(200, 150)">
-    <!-- Handle and arms wobble together -->
-    <g>
-      <animateTransform attributeName="transform" type="rotate" values="0 0 20; 2.5 0 20; 0 0 20; -2.5 0 20; 0 0 20" dur="2.5s" repeatCount="indefinite"/>
-
-      <!-- Broom handle -->
-      <rect x="-4" y="-80" width="8" height="100" fill="#8b4513" rx="3"/>
-
-      <!-- Left arm holding bucket -->
-      <g>
-        <path d="M -4,-50 Q -20,-45 -35,-35" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <path d="M -35,-35 L -38,-25" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
-
-        <!-- Left bucket -->
-        <g transform="translate(-45, -20)">
-          <!-- Bucket shadow -->
-          <ellipse cx="0" cy="8" rx="12" ry="7" fill="#64748b" opacity="0.3"/>
-
-          <!-- Wooden bucket body with vertical planks -->
-          <path d="M -12,8 L -10,-4 Q -10,-6 0,-6 Q 10,-6 10,-4 L 12,8 Q 12,10 0,10 Q -12,10 -12,8 Z" fill="url(#bucket-gradient)"/>
-
-          <!-- Wood planks texture -->
-          <line x1="-8" y1="-4" x2="-9" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
-          <line x1="-4" y1="-5" x2="-5" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
-          <line x1="0" y1="-6" x2="0" y2="9" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
-          <line x1="4" y1="-5" x2="5" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
-          <line x1="8" y1="-4" x2="9" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
-
-          <!-- Rim -->
-          <ellipse cx="0" cy="-4" rx="10" ry="2" fill="#94a3b8"/>
-          <ellipse cx="0" cy="-5" rx="10" ry="1" fill="#cbd5e1" opacity="0.6"/>
-
-          <!-- Simple water surface with sloshing -->
-          <ellipse cx="0" cy="-2" rx="9" ry="3" fill="url(#water-gradient)">
-            <animate attributeName="rx" values="9;8.5;9;9.5;9" dur="2s" repeatCount="indefinite"/>
-            <animate attributeName="ry" values="3;3.5;3;2.5;3" dur="2s" repeatCount="indefinite"/>
-          </ellipse>
-
-          <!-- Metal handle -->
-          <path d="M -9,-4 Q 0,-12 9,-4" stroke="#6b7280" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <circle cx="-9" cy="-4" r="1.5" fill="#4b5563"/>
-          <circle cx="9" cy="-4" r="1.5" fill="#4b5563"/>
-        </g>
-      </g>
-
-      <!-- Right arm holding bucket -->
-      <g>
-        <path d="M 4,-50 Q 20,-45 35,-35" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <path d="M 35,-35 L 38,-25" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
-
-        <!-- Right bucket -->
-        <g transform="translate(45, -20)">
-          <!-- Bucket shadow -->
-          <ellipse cx="0" cy="8" rx="12" ry="7" fill="#64748b" opacity="0.3"/>
-
-          <!-- Wooden bucket body with vertical planks -->
-          <path d="M -12,8 L -10,-4 Q -10,-6 0,-6 Q 10,-6 10,-4 L 12,8 Q 12,10 0,10 Q -12,10 -12,8 Z" fill="url(#bucket-gradient)"/>
-
-          <!-- Wood planks texture -->
-          <line x1="-8" y1="-4" x2="-9" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
-          <line x1="-4" y1="-5" x2="-5" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
-          <line x1="0" y1="-6" x2="0" y2="9" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
-          <line x1="4" y1="-5" x2="5" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
-          <line x1="8" y1="-4" x2="9" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
-
-          <!-- Rim -->
-          <ellipse cx="0" cy="-4" rx="10" ry="2" fill="#94a3b8"/>
-          <ellipse cx="0" cy="-5" rx="10" ry="1" fill="#cbd5e1" opacity="0.6"/>
-
-          <!-- Simple water surface with sloshing (opposite phase) -->
-          <ellipse cx="0" cy="-2" rx="9" ry="3" fill="url(#water-gradient)">
-            <animate attributeName="rx" values="9;9.5;9;8.5;9" dur="2s" repeatCount="indefinite"/>
-            <animate attributeName="ry" values="3;2.5;3;3.5;3" dur="2s" repeatCount="indefinite"/>
-          </ellipse>
-
-          <!-- Metal handle -->
-          <path d="M -9,-4 Q 0,-12 9,-4" stroke="#6b7280" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <circle cx="-9" cy="-4" r="1.5" fill="#4b5563"/>
-          <circle cx="9" cy="-4" r="1.5" fill="#4b5563"/>
-        </g>
-      </g>
-    </g>
-
-    <!-- Besom bundle (swivels as one unit, opposite to handle) -->
-    <g>
-      <animateTransform attributeName="transform" type="rotate" values="0 0 11; -4 0 11; 0 0 11; 4 0 11; 0 0 11" dur="2.5s" repeatCount="indefinite"/>
-
-      <!-- Top bristles extending ABOVE the binding band -->
-      <!-- Slanting inward from wide at top to narrow at cinch -->
-      <path d="M -10,3 L -8,6 L -6.5,9 L -6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
-      <path d="M -7,3 L -6,6 L -4.5,9 L -4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
-      <path d="M -4,3 L -3.5,6 L -2.5,9 L -2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
-      <path d="M 4,3 L 3.5,6 L 2.5,9 L 2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
-      <path d="M 7,3 L 6,6 L 4.5,9 L 4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
-      <path d="M 10,3 L 8,6 L 6.5,9 L 6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
-
-      <!-- Add more bristles for density -->
-      <path d="M -8.5,3 L -7,6 L -5.5,9 L -5,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
-      <path d="M -5.5,3 L -5,6 L -3.5,9 L -3,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
-      <path d="M -1,3 L -1,6 L -0.5,9 L 0,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
-      <path d="M 1,3 L 1,6 L 0.5,9 L 0,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
-      <path d="M 5.5,3 L 5,6 L 3.5,9 L 3,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
-      <path d="M 8.5,3 L 7,6 L 5.5,9 L 5,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
-
-      <!-- Brown binding band (cinches the bristles) - NARROWER now -->
-      <rect x="-7" y="8" width="14" height="6" fill="#654321" rx="1"/>
-
-      <!-- Bottom bristles (forked into walking legs) - adjusted to match narrower cinch -->
-      <!-- Left leg group - starting narrower at y=14 -->
-      <path d="M -7,14 L -10,20 L -12,28 L -10,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
-      <path d="M -5,14 L -7,20 L -9,28 L -7,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
-      <path d="M -3,14 L -4,20 L -6,28 L -4,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
-
-      <!-- Right leg group -->
-      <path d="M 3,14 L 4,20 L 6,28 L 4,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
-      <path d="M 5,14 L 7,20 L 9,28 L 7,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
-      <path d="M 7,14 L 10,20 L 12,28 L 10,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
-
-      <!-- Middle bristles -->
-      <path d="M -1,14 L -2,20 L -3,28 L -2,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
-      <path d="M 1,14 L 2,20 L 3,28 L 2,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
-    </g>
-  </g>
 
   <!-- Magic sparkles - calm and controlled -->
   <g opacity="0.7">
@@ -180,8 +115,8 @@
     </circle>
   </g>
 
+  <use href="#broom-enchantment" transform="translate(200, 150)"/>
+
   <!-- Peaceful text -->
-  <text x="200" y="260" text-anchor="middle" font-size="18" font-family="system-ui, sans-serif" fill="#475569" font-style="italic">
-    The magic works ✨
-  </text>
+  <text x="200" y="240" text-anchor="middle" font-size="18" font-family="system-ui, sans-serif" fill="#475569" font-style="italic">The magic works ✨</text>
 </svg>

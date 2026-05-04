@@ -17,9 +17,26 @@
       <stop offset="100%" style="stop-color:#5a4a3a;stop-opacity:1"/>
     </linearGradient>
     <linearGradient id="pm-water" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#67e8f9;stop-opacity:0.6"/>
-      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.8"/>
+      <stop offset="0%" style="stop-color:#67e8f9;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1"/>
     </linearGradient>
+
+    <symbol id="pm-bucket-sym" overflow="visible">
+      <path d="M -10,-3 Q 0,-6 10,-3 L 10,8 Q 10,14 0,14 Q -10,14 -10,8 Z" fill="url(#pm-bucket)"/>
+      <line x1="-7" y1="-3" x2="-7" y2="13" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="-3" y1="-3" x2="-3" y2="14" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="0" y1="-3" x2="0" y2="14" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="3" y1="-3" x2="3" y2="14" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="7" y1="-3" x2="7" y2="13" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <ellipse cx="0" cy="-1" rx="8.5" ry="2" fill="url(#pm-water)">
+        <animate attributeName="rx" values="8.5;7.5;8.5;9;8.5" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="2;2.8;2;1.5;2" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="-1;-1.5;-1;-0.5;-1" dur="2s" repeatCount="indefinite"/>
+      </ellipse>
+      <path d="M -10,-3 Q 0,-13 10,-3" stroke="#6b7280" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="-10" cy="-3" r="1.5" fill="#4b5563"/>
+      <circle cx="10" cy="-3" r="1.5" fill="#4b5563"/>
+    </symbol>
   </defs>
 
   <!-- Background -->
@@ -39,7 +56,6 @@
     <ellipse cx="0" cy="-60" rx="10" ry="2.8" fill="#6366f1"/>
 
     <!-- Left eyebrow: RAISED (viewer's left = character's right) -->
-    <!-- Arched high, well above eye level -->
     <path d="M -6,-56 Q -3,-62 0,-59" stroke="#4c1d95" stroke-width="1.8" fill="none" stroke-linecap="round"/>
     <!-- Right eyebrow: normal level -->
     <path d="M 1,-55 Q 4,-57 7,-55" stroke="#4c1d95" stroke-width="1.5" fill="none" stroke-linecap="round"/>
@@ -82,7 +98,7 @@
 
   <!-- Broom in lower left foreground -->
   <g transform="translate(88, 252)">
-    <!-- Handle, arms, and buckets wobble together -->
+    <!-- Handle, arms, and buckets swivel together -->
     <g>
       <animateTransform attributeName="transform" type="rotate"
         values="0 0 20; 2.5 0 20; 0 0 20; -2.5 0 20; 0 0 20"
@@ -91,45 +107,17 @@
       <!-- Handle -->
       <rect x="-4" y="-87" width="8" height="107" fill="#8b4513" rx="3"/>
 
-      <!-- Left arm with bucket -->
+      <!-- Left arm -->
       <path d="M -4,-46 Q -15,-41 -22,-29" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
       <path d="M -22,-29 L -24,-23" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <g transform="translate(-28, -17)">
-        <ellipse cx="0" cy="8" rx="10" ry="6" fill="#64748b" opacity="0.3"/>
-        <path d="M -10,7 L -9,-3 Q -9,-5 0,-5 Q 9,-5 9,-3 L 10,7 Q 10,9 0,9 Q -10,9 -10,7 Z" fill="url(#pm-bucket)"/>
-        <line x1="-7" y1="-3" x2="-8" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
-        <line x1="0" y1="-5" x2="0" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
-        <line x1="7" y1="-3" x2="8" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
-        <ellipse cx="0" cy="-3" rx="9" ry="2" fill="#94a3b8"/>
-        <ellipse cx="0" cy="-4" rx="9" ry="1" fill="#cbd5e1" opacity="0.6"/>
-        <ellipse cx="0" cy="-1" rx="8" ry="2.5" fill="url(#pm-water)">
-          <animate attributeName="rx" values="8;7.5;8;8.5;8" dur="2s" repeatCount="indefinite"/>
-          <animate attributeName="ry" values="2.5;3;2.5;2;2.5" dur="2s" repeatCount="indefinite"/>
-        </ellipse>
-        <path d="M -7,-3 Q 0,-10 7,-3" stroke="#6b7280" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <circle cx="-7" cy="-3" r="1.2" fill="#4b5563"/>
-        <circle cx="7" cy="-3" r="1.2" fill="#4b5563"/>
-      </g>
 
-      <!-- Right arm with bucket -->
+      <!-- Right arm -->
       <path d="M 4,-46 Q 15,-41 22,-29" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
       <path d="M 22,-29 L 24,-23" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <g transform="translate(28, -17)">
-        <ellipse cx="0" cy="8" rx="10" ry="6" fill="#64748b" opacity="0.3"/>
-        <path d="M -10,7 L -9,-3 Q -9,-5 0,-5 Q 9,-5 9,-3 L 10,7 Q 10,9 0,9 Q -10,9 -10,7 Z" fill="url(#pm-bucket)"/>
-        <line x1="-7" y1="-3" x2="-8" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
-        <line x1="0" y1="-5" x2="0" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
-        <line x1="7" y1="-3" x2="8" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
-        <ellipse cx="0" cy="-3" rx="9" ry="2" fill="#94a3b8"/>
-        <ellipse cx="0" cy="-4" rx="9" ry="1" fill="#cbd5e1" opacity="0.6"/>
-        <ellipse cx="0" cy="-1" rx="8" ry="2.5" fill="url(#pm-water)">
-          <animate attributeName="rx" values="8;8.5;8;7.5;8" dur="2s" repeatCount="indefinite"/>
-          <animate attributeName="ry" values="2.5;2;2.5;3;2.5" dur="2s" repeatCount="indefinite"/>
-        </ellipse>
-        <path d="M -7,-3 Q 0,-10 7,-3" stroke="#6b7280" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <circle cx="-7" cy="-3" r="1.2" fill="#4b5563"/>
-        <circle cx="7" cy="-3" r="1.2" fill="#4b5563"/>
-      </g>
+
+      <!-- Buckets -->
+      <use href="#pm-bucket-sym" transform="translate(-26, -17)"/>
+      <use href="#pm-bucket-sym" transform="translate(26, -17)"/>
     </g>
 
     <!-- Besom bundle (swivels opposite to handle) -->
@@ -157,7 +145,7 @@
       <!-- Binding band -->
       <rect x="-7" y="13" width="14" height="6" fill="#654321" rx="1"/>
 
-      <!-- Bottom bristles (walking legs) -->
+      <!-- Bottom bristles -->
       <path d="M -7,19 L -10,26 L -13,36 L -11,46" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
       <path d="M -5,19 L -8,26 L -10,36 L -8,46" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
       <path d="M -3,19 L -5,26 L -7,36 L -5,46" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>

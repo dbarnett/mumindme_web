@@ -2,9 +2,13 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "prebuild": "npm run build:svg",
     "build": "next build",
+    "build:svg": "node scripts/expand-svg-phases.cjs",
+    "predev": "npm run build:svg",
     "dev": "next dev --turbo",
-    "start": "next start"
+    "start": "next start",
+    "validate:svg": "xmllint --noout public/images/**/*.svg && echo '✅ All SVGs valid'"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.2",

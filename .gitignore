@@ -7,3 +7,7 @@ node_modules/
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Generated SVGs expanded from src/svg/ (built at deploy time)
+/public/images/posts/apprentice-flood-drowning.svg
+/public/images/posts/apprentice-autopilot-conducting.svg

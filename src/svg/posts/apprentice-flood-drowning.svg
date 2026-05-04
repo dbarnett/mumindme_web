@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Flood WIP">
+  <defs>
+    <linearGradient id="dark-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#334155;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bucket-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b7355;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#6b5344;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5a4a3a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="water-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#67e8f9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+    </linearGradient>
+    <!-- Bucket with water: vertical sides, curved top opening, rounded bottom. -->
+    <symbol id="bucket" overflow="visible">
+      <path d="M -10,-3 Q 0,-6 10,-3 L 10,8 Q 10,14 0,14 Q -10,14 -10,8 Z" fill="url(#bucket-grad)"/>
+      <line x1="-7" y1="-3" x2="-7" y2="13" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="-3" y1="-3" x2="-3" y2="14" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="0" y1="-3" x2="0" y2="14" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="3" y1="-3" x2="3" y2="14" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="7" y1="-3" x2="7" y2="13" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <ellipse cx="0" cy="-1" rx="8.5" ry="2" fill="url(#water-grad)">
+        <animate attributeName="rx" values="8.5;7.5;8.5;9;8.5" dur="1.7s" begin="0.9s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="2;2.8;2;1.5;2" dur="1.7s" begin="0.9s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="-1;-1.5;-1;-0.5;-1" dur="1.7s" begin="0.9s" repeatCount="indefinite"/>
+      </ellipse>
+      <path d="M -10,-3 Q 0,-13 10,-3" stroke="#6b7280" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="-10" cy="-3" r="1.5" fill="#4b5563"/>
+      <circle cx="10" cy="-3" r="1.5" fill="#4b5563"/>
+    </symbol>
+    <!-- Shared besom (bristles only). Used by both broom-back and broom-front.
+         begin= placeholder overridden by @phase expansion. -->
+    <symbol id="broom-besom" overflow="visible">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" values="0 0 11; -4 0 11; 0 0 11; 4 0 11; 0 0 11" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+        <path d="M -10,3 L -8,6 L -6.5,9 L -6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+        <path d="M -7,3 L -6,6 L -4.5,9 L -4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
+        <path d="M -4,3 L -3.5,6 L -2.5,9 L -2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+        <path d="M 4,3 L 3.5,6 L 2.5,9 L 2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+        <path d="M 7,3 L 6,6 L 4.5,9 L 4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
+        <path d="M 10,3 L 8,6 L 6.5,9 L 6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+        <path d="M -8.5,3 L -7,6 L -5.5,9 L -5,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+        <path d="M -5.5,3 L -5,6 L -3.5,9 L -3,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+        <path d="M -1,3 L -1,6 L -0.5,9 L 0,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+        <path d="M 1,3 L 1,6 L 0.5,9 L 0,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+        <path d="M 5.5,3 L 5,6 L 3.5,9 L 3,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+        <path d="M 8.5,3 L 7,6 L 5.5,9 L 5,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+        <rect x="-7" y="8" width="14" height="6" fill="#654321" rx="1"/>
+        <path d="M -7,14 L -10,20 L -13,30 L -11,40" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+        <path d="M -5,14 L -8,20 L -10,30 L -8,40" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+        <path d="M -3,14 L -5,20 L -7,30 L -5,40" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+        <path d="M 3,14 L 5,20 L 7,30 L 5,40" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+        <path d="M 5,14 L 8,20 L 10,30 L 8,40" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+        <path d="M 7,14 L 10,20 L 13,30 L 11,40" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+        <path d="M -1,14 L -2,20 L -3,30 L -2,40" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+        <path d="M 1,14 L 2,20 L 3,30 L 2,40" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      </g>
+    </symbol>
+
+    <!-- Back-row broom: smaller handle + arms, no buckets. opacity="0.8" on <use>. -->
+    <symbol id="broom-back" overflow="visible">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" values="0 0 20; 2 0 20; 0 0 20; -2 0 20; 0 0 20" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+        <rect x="-3" y="-65" width="6" height="85" fill="#8b4513" rx="2"/>
+        <!-- Left arm (no bucket) -->
+        <path d="M -3,-32 Q -13,-28 -20,-20" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M -20,-20 L -22,-14" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- Right arm (no bucket) -->
+        <path d="M 3,-32 Q 13,-28 20,-20" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M 20,-20 L 22,-14" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </g>
+      <use href="#broom-besom"/>
+    </symbol>
+
+    <!-- Front-row broom: full-size handle, arms, buckets. Full opacity on <use>. -->
+    <symbol id="broom-front" overflow="visible">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" values="0 0 20; 2.5 0 20; 0 0 20; -2.5 0 20; 0 0 20" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+        <rect x="-4" y="-80" width="8" height="100" fill="#8b4513" rx="3"/>
+        <!-- Left arm -->
+        <path d="M -4,-40 Q -16,-35 -25,-25" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M -25,-25 L -28,-18" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <!-- Right arm -->
+        <path d="M 4,-40 Q 16,-35 25,-25" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M 25,-25 L 28,-18" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <use href="#broom-besom"/>
+        <use href="#bucket" transform="translate(-26, -7)"/>
+        <use href="#bucket" transform="translate(26, -7)"/>
+      </g>
+    </symbol>
+  </defs>
+
+  <rect width="400" height="300" fill="url(#dark-bg)"/>
+
+  <!-- Water sloshing along the bottom -->
+  <g opacity="0.6">
+    <path d="M -60,258 Q -30,250 0,255 T 60,260 T 120,252 T 180,260 T 240,252 T 300,260 T 360,252 T 420,260 T 460,255 L 460,300 L -60,300 Z" fill="#0891b2" opacity="0.5">
+      <animate attributeName="d" values="
+        M -60,258 Q -30,250 0,255 T 60,260 T 120,252 T 180,260 T 240,252 T 300,260 T 360,252 T 420,260 T 460,255 L 460,300 L -60,300 Z;
+        M -60,262 Q -30,255 0,260 T 60,252 T 120,260 T 180,252 T 240,260 T 300,252 T 360,260 T 420,252 T 460,258 L 460,300 L -60,300 Z;
+        M -60,258 Q -30,250 0,255 T 60,260 T 120,252 T 180,260 T 240,252 T 300,260 T 360,252 T 420,260 T 460,255 L 460,300 L -60,300 Z
+      " dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M -60,272 Q -20,266 0,270 T 80,276 T 160,270 T 240,276 T 320,270 T 400,276 T 460,272 L 460,300 L -60,300 Z" fill="#06b6d4" opacity="0.4">
+      <animate attributeName="d" values="
+        M -60,272 Q -20,266 0,270 T 80,276 T 160,270 T 240,276 T 320,270 T 400,276 T 460,272 L 460,300 L -60,300 Z;
+        M -60,276 Q -20,270 0,274 T 80,268 T 160,274 T 240,268 T 320,274 T 400,268 T 460,274 L 460,300 L -60,300 Z;
+        M -60,272 Q -20,266 0,270 T 80,276 T 160,270 T 240,276 T 320,270 T 400,276 T 460,272 L 460,300 L -60,300 Z
+      " dur="2.5s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="100" cy="245" r="4" fill="#67e8f9" opacity="0.7">
+      <animate attributeName="cy" values="245;235;245" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="250" r="5" fill="#67e8f9" opacity="0.6">
+      <animate attributeName="cy" values="250;238;250" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="248" r="4" fill="#67e8f9" opacity="0.7">
+      <animate attributeName="cy" values="248;240;248" dur="1.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Frantic sparkles -->
+  <g opacity="0.9">
+    <circle cx="60" cy="110" r="3" fill="#ef4444">
+      <animate attributeName="opacity" values="1;0.2;1" dur="0.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="140" cy="60" r="2.5" fill="#f59e0b">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="190" cy="100" r="3" fill="#ef4444">
+      <animate attributeName="opacity" values="1;0.3;1" dur="0.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="80" r="2.5" fill="#f59e0b">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="0.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="330" cy="130" r="3" fill="#ef4444">
+      <animate attributeName="opacity" values="1;0.2;1" dur="0.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="150" r="2" fill="#fbbf24">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="160" r="2" fill="#fbbf24">
+      <animate attributeName="opacity" values="1;0.3;1" dur="0.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- @phase phase=0.3s --> <use href="#broom-back" opacity="0.8" transform="translate(100,180)"/>
+  <!-- @phase phase=0.6s --> <use href="#broom-back" opacity="0.8" transform="translate(200,175)"/>
+  <!-- @phase phase=0.9s --> <use href="#broom-back" opacity="0.8" transform="translate(300,180)"/>
+
+  <!-- The overwhelmed apprentice in the center (BLUE robes) -->
+  <g transform="translate(200, 195)">
+    <!-- Body (blue robes) -->
+    <path d="M -15,16 L -10,-2 L 10,-2 L 15,16 L 14,40 L -14,40 Z" fill="#3b82f6"/>
+    <!-- Arms up in panic -->
+    <path d="M -10,0 Q -15,-5 -20,-15" stroke="#3b82f6" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="-22" cy="-18" r="3" fill="#fde68a"/>
+    <path d="M 10,0 Q 15,-5 20,-15" stroke="#3b82f6" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="22" cy="-18" r="3" fill="#fde68a"/>
+    <!-- Head, hat, exclamation all 15px higher than body origin -->
+    <g transform="translate(0, -15)">
+      <circle cx="0" cy="5" r="11" fill="#fde68a" stroke="#3b82f6" stroke-width="1.5"/>
+      <circle cx="-4" cy="3" r="2" fill="#1e40af"/>
+      <circle cx="4" cy="3" r="2" fill="#1e40af"/>
+      <ellipse cx="0" cy="9" rx="3" ry="4" fill="#1e40af"/>
+      <path d="M -10,-3 L 0,-25 L 10,-3 Z" fill="#3b82f6"/>
+      <ellipse cx="0" cy="-3" rx="11" ry="3" fill="#3b82f6"/>
+      <g transform="translate(0, -50)">
+        <rect x="-4" y="0" width="8" height="15" fill="#ef4444" rx="2"/>
+        <circle cx="0" cy="19" r="4" fill="#ef4444"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- @phase phase=0.25s --> <use href="#broom-front" transform="translate(80,200)"/>
+  <!-- @phase phase=0.25s --> <use href="#broom-front" transform="translate(120,210)"/>
+  <!-- @phase phase=0.5s --> <use href="#broom-front" transform="translate(160,205)"/>
+  <!-- @phase phase=0.7s --> <use href="#broom-front" transform="translate(240,205)"/>
+  <!-- @phase phase=0.4s --> <use href="#broom-front" transform="translate(280,210)"/>
+  <!-- @phase phase=1.1s --> <use href="#broom-front" transform="translate(320,200)"/>
+
+  <text x="200" y="285" text-anchor="middle" font-size="20" font-family="system-ui, sans-serif" fill="#ef4444" font-weight="bold" font-style="italic">STOP! PLEASE STOP! 😱</text>
+</svg>
