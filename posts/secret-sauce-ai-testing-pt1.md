@@ -2,6 +2,7 @@
 title: 'The Secret Sauce for Coding with AI: Smart Testing'
 date: '2026-05-03'
 tags: ['dev', 'ai', 'testing']
+bluesky_uri: 'https://bsky.app/profile/did:plc:tgrzgew7bsrkkro4i6x3yqm5/post/3mkyxbd7aus2x'
 ---
 
 You've probably tried coding with AI.
