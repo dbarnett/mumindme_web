@@ -1,6 +1,6 @@
 ---
 title: 'The Secret Sauce for Coding with AI: Smart Testing'
-date: '2025-11-02'
+date: '2026-05-03'
 tags: ['dev', 'ai', 'testing']
 ---
 
