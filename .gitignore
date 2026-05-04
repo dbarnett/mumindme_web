@@ -8,6 +8,9 @@ node_modules/
 *.tsbuildinfo
 next-env.d.ts
 
+# Generated talks (built at deploy time)
+/public/talks/
+
 # Generated SVGs expanded from src/svg/ (built at deploy time)
 /public/images/posts/apprentice-flood-drowning.svg
 /public/images/posts/apprentice-autopilot-conducting.svg
