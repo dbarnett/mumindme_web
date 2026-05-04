@@ -302,3 +302,9 @@ They've learned the closing spell. They're not drowning anymore.
 ---
 
 *Coming in Part 2: "Tending the Fire" - You've learned to stop the flood. But can you be trusted with this power? What happens when you need to teach others? And what about those moments when the magic still goes wrong?*
+
+---
+
+*This post is based on a talk I gave at [PosaDev 2025](https://posadev.org/speaker/d8e2b389-6002-4d50-91ca-2808ca204c0b). You can view the [slides here](/talks/ai-testing-secret-sauce.html).*
+
+<!-- Conference URL fallback: https://dev.events/conferences/posadev-2025-l7n20mps -->
