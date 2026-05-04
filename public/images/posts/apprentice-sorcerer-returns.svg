@@ -1,0 +1,433 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="sorcerer-title sorcerer-desc">
+  <title id="sorcerer-title">The Sorcerer Returns - Knowledge and Command</title>
+  <desc id="sorcerer-desc">The sorcerer with their staff of knowledge and command words. Organized brooms working properly again. The magic is under control - not through brute force, but through understanding and smart systems.</desc>
+
+  <defs>
+    <linearGradient id="staff-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="wisdom-glow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0" />
+    </radialGradient>
+    <linearGradient id="peaceful-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ddd6fe;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#e0f2fe;stop-opacity:0.3" />
+    </linearGradient>
+    <linearGradient id="bucket-returns" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b7355;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#6b5344;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5a4a3a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="water-returns" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#67e8f9;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Calm, organized background -->
+  <rect width="400" height="300" fill="#f8fafc"/>
+  <rect width="400" height="300" fill="url(#peaceful-bg)"/>
+
+  <!-- The sorcerer (simple but authoritative) -->
+  <g transform="translate(200, 180)">
+    <!-- Robes -->
+    <path d="M -25,0 L -20,-40 L -15,-60 L 15,-60 L 20,-40 L 25,0 Z" fill="#6366f1" opacity="0.9"/>
+
+    <!-- Body -->
+    <rect x="-12" y="-60" width="24" height="50" fill="#8b5cf6" rx="4"/>
+
+    <!-- Head -->
+    <circle cx="0" cy="-70" r="14" fill="#fde68a" stroke="#8b5cf6" stroke-width="2"/>
+
+    <!-- Wise eyes -->
+    <circle cx="-4" cy="-72" r="2" fill="#4c1d95"/>
+    <circle cx="4" cy="-72" r="2" fill="#4c1d95"/>
+
+    <!-- Slight smile of mastery -->
+    <path d="M -5,-65 Q 0,-63 5,-65" stroke="#4c1d95" stroke-width="1.5" fill="none"/>
+
+    <!-- The staff of knowledge -->
+    <line x1="-18" y1="-50" x2="-18" y2="20" stroke="url(#staff-gradient)" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Crystal/orb at top of staff (wisdom) -->
+    <circle cx="-18" cy="-55" r="8" fill="#a78bfa" opacity="0.8" filter="url(#glow)"/>
+    <circle cx="-18" cy="-55" r="5" fill="#ddd6fe"/>
+
+    <!-- Wisdom glow -->
+    <circle cx="-18" cy="-55" r="15" fill="url(#wisdom-glow)">
+      <animate attributeName="opacity" values="0.4;0.7;0.4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Organized, controlled brooms working properly -->
+  <g transform="translate(80, 215)">
+    <!-- Broom handle -->
+    <rect x="-4" y="-80" width="8" height="100" fill="#8b4513" rx="3"/>
+
+    <!-- Besom bundle -->
+    <g>
+      <!-- Top bristles extending ABOVE the binding band -->
+      <path d="M -10,3 L -8,6 L -6.5,9 L -6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M -7,3 L -6,6 L -4.5,9 L -4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M -4,3 L -3.5,6 L -2.5,9 L -2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 4,3 L 3.5,6 L 2.5,9 L 2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 7,3 L 6,6 L 4.5,9 L 4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 10,3 L 8,6 L 6.5,9 L 6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+
+      <!-- Secondary bristles for density -->
+      <path d="M -8.5,3 L -7,6 L -5.5,9 L -5,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M -5.5,3 L -5,6 L -3.5,9 L -3,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M -1,3 L -1,6 L -0.5,9 L 0,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 1,3 L 1,6 L 0.5,9 L 0,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 5.5,3 L 5,6 L 3.5,9 L 3,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 8.5,3 L 7,6 L 5.5,9 L 5,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+
+      <!-- Brown binding band -->
+      <rect x="-7" y="8" width="14" height="6" fill="#654321" rx="1"/>
+
+      <!-- Bottom bristles (legs) -->
+      <path d="M -7,14 L -10,20 L -12,28 L -10,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M -5,14 L -7,20 L -9,28 L -7,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M -3,14 L -4,20 L -6,28 L -4,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 3,14 L 4,20 L 6,28 L 4,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 5,14 L 7,20 L 9,28 L 7,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 7,14 L 10,20 L 12,28 L 10,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M -1,14 L -2,20 L -3,28 L -2,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 1,14 L 2,20 L 3,28 L 2,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+    </g>
+
+    <!-- Arms with wooden buckets -->
+    <path d="M -4,-40 Q -14,-35 -20,-20" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M -20,-20 L -22,-15" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <g transform="translate(-26, -10)">
+      <!-- Bucket shadow -->
+      <ellipse cx="0" cy="8" rx="10" ry="6" fill="#64748b" opacity="0.3"/>
+
+      <!-- Wooden bucket body with vertical planks -->
+      <path d="M -10,7 L -9,-3 Q -9,-5 0,-5 Q 9,-5 9,-3 L 10,7 Q 10,9 0,9 Q -10,9 -10,7 Z" fill="url(#bucket-returns)"/>
+
+      <!-- Wood planks texture -->
+      <line x1="-7" y1="-3" x2="-8" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="-3" y1="-4" x2="-4" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="0" y1="-5" x2="0" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="3" y1="-4" x2="4" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="7" y1="-3" x2="8" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+
+      <!-- Wooden rim -->
+      <ellipse cx="0" cy="-3" rx="9" ry="2" fill="#94a3b8"/>
+      <ellipse cx="0" cy="-4" rx="9" ry="1" fill="#cbd5e1" opacity="0.6"/>
+
+      <!-- Water surface -->
+      <ellipse cx="0" cy="-1" rx="8" ry="2.5" fill="url(#water-returns)"/>
+
+      <!-- Metal handle -->
+      <path d="M -7,-3 Q 0,-10 7,-3" stroke="#6b7280" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="-7" cy="-3" r="1.2" fill="#4b5563"/>
+      <circle cx="7" cy="-3" r="1.2" fill="#4b5563"/>
+    </g>
+    <path d="M 4,-40 Q 14,-35 20,-20" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 20,-20 L 22,-15" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <g transform="translate(26, -10)">
+      <!-- Bucket shadow -->
+      <ellipse cx="0" cy="8" rx="10" ry="6" fill="#64748b" opacity="0.3"/>
+
+      <!-- Wooden bucket body with vertical planks -->
+      <path d="M -10,7 L -9,-3 Q -9,-5 0,-5 Q 9,-5 9,-3 L 10,7 Q 10,9 0,9 Q -10,9 -10,7 Z" fill="url(#bucket-returns)"/>
+
+      <!-- Wood planks texture -->
+      <line x1="-7" y1="-3" x2="-8" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="-3" y1="-4" x2="-4" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="0" y1="-5" x2="0" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="3" y1="-4" x2="4" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="7" y1="-3" x2="8" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+
+      <!-- Wooden rim -->
+      <ellipse cx="0" cy="-3" rx="9" ry="2" fill="#94a3b8"/>
+      <ellipse cx="0" cy="-4" rx="9" ry="1" fill="#cbd5e1" opacity="0.6"/>
+
+      <!-- Water surface -->
+      <ellipse cx="0" cy="-1" rx="8" ry="2.5" fill="url(#water-returns)"/>
+
+      <!-- Metal handle -->
+      <path d="M -7,-3 Q 0,-10 7,-3" stroke="#6b7280" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="-7" cy="-3" r="1.2" fill="#4b5563"/>
+      <circle cx="7" cy="-3" r="1.2" fill="#4b5563"/>
+    </g>
+  </g>
+
+  <g transform="translate(200, 220)">
+    <!-- Broom handle -->
+    <rect x="-4" y="-80" width="8" height="100" fill="#8b4513" rx="3"/>
+
+    <!-- Besom bundle -->
+    <g>
+      <!-- Top bristles extending ABOVE the binding band -->
+      <path d="M -10,3 L -8,6 L -6.5,9 L -6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M -7,3 L -6,6 L -4.5,9 L -4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M -4,3 L -3.5,6 L -2.5,9 L -2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 4,3 L 3.5,6 L 2.5,9 L 2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 7,3 L 6,6 L 4.5,9 L 4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 10,3 L 8,6 L 6.5,9 L 6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+
+      <!-- Secondary bristles for density -->
+      <path d="M -8.5,3 L -7,6 L -5.5,9 L -5,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M -5.5,3 L -5,6 L -3.5,9 L -3,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M -1,3 L -1,6 L -0.5,9 L 0,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 1,3 L 1,6 L 0.5,9 L 0,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 5.5,3 L 5,6 L 3.5,9 L 3,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 8.5,3 L 7,6 L 5.5,9 L 5,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+
+      <!-- Brown binding band -->
+      <rect x="-7" y="8" width="14" height="6" fill="#654321" rx="1"/>
+
+      <!-- Bottom bristles (legs) -->
+      <path d="M -7,14 L -10,20 L -12,28 L -10,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M -5,14 L -7,20 L -9,28 L -7,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M -3,14 L -4,20 L -6,28 L -4,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 3,14 L 4,20 L 6,28 L 4,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 5,14 L 7,20 L 9,28 L 7,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 7,14 L 10,20 L 12,28 L 10,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M -1,14 L -2,20 L -3,28 L -2,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 1,14 L 2,20 L 3,28 L 2,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+    </g>
+    <path d="M -3,-36 Q -14,-31 -20,-21" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M -20,-21 L -22,-16" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <g transform="translate(-26, -11)">
+      <!-- Bucket shadow -->
+      <ellipse cx="0" cy="8" rx="10" ry="6" fill="#64748b" opacity="0.3"/>
+
+      <!-- Wooden bucket body with vertical planks -->
+      <path d="M -10,7 L -9,-3 Q -9,-5 0,-5 Q 9,-5 9,-3 L 10,7 Q 10,9 0,9 Q -10,9 -10,7 Z" fill="url(#bucket-returns)"/>
+
+      <!-- Wood planks texture -->
+      <line x1="-7" y1="-3" x2="-8" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="-3" y1="-4" x2="-4" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="0" y1="-5" x2="0" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="3" y1="-4" x2="4" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="7" y1="-3" x2="8" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+
+      <!-- Wooden rim -->
+      <ellipse cx="0" cy="-3" rx="9" ry="2" fill="#94a3b8"/>
+      <ellipse cx="0" cy="-4" rx="9" ry="1" fill="#cbd5e1" opacity="0.6"/>
+
+      <!-- Water surface -->
+      <ellipse cx="0" cy="-1" rx="8" ry="2.5" fill="url(#water-returns)"/>
+
+      <!-- Metal handle -->
+      <path d="M -7,-3 Q 0,-10 7,-3" stroke="#6b7280" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="-7" cy="-3" r="1.2" fill="#4b5563"/>
+      <circle cx="7" cy="-3" r="1.2" fill="#4b5563"/>
+    </g>
+    <path d="M 3,-36 Q 14,-31 20,-21" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 20,-21 L 22,-16" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <g transform="translate(26, -11)">
+      <!-- Bucket shadow -->
+      <ellipse cx="0" cy="8" rx="10" ry="6" fill="#64748b" opacity="0.3"/>
+
+      <!-- Wooden bucket body with vertical planks -->
+      <path d="M -10,7 L -9,-3 Q -9,-5 0,-5 Q 9,-5 9,-3 L 10,7 Q 10,9 0,9 Q -10,9 -10,7 Z" fill="url(#bucket-returns)"/>
+
+      <!-- Wood planks texture -->
+      <line x1="-7" y1="-3" x2="-8" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="-3" y1="-4" x2="-4" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="0" y1="-5" x2="0" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="3" y1="-4" x2="4" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="7" y1="-3" x2="8" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+
+      <!-- Wooden rim -->
+      <ellipse cx="0" cy="-3" rx="9" ry="2" fill="#94a3b8"/>
+      <ellipse cx="0" cy="-4" rx="9" ry="1" fill="#cbd5e1" opacity="0.6"/>
+
+      <!-- Water surface -->
+      <ellipse cx="0" cy="-1" rx="8" ry="2.5" fill="url(#water-returns)"/>
+
+      <!-- Metal handle -->
+      <path d="M -7,-3 Q 0,-10 7,-3" stroke="#6b7280" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="-7" cy="-3" r="1.2" fill="#4b5563"/>
+      <circle cx="7" cy="-3" r="1.2" fill="#4b5563"/>
+    </g>
+  </g>
+
+  <g transform="translate(320, 218)">
+    <!-- Broom handle -->
+    <rect x="-4" y="-80" width="8" height="100" fill="#8b4513" rx="3"/>
+
+    <!-- Besom bundle -->
+    <g>
+      <!-- Top bristles extending ABOVE the binding band -->
+      <path d="M -10,3 L -8,6 L -6.5,9 L -6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M -7,3 L -6,6 L -4.5,9 L -4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M -4,3 L -3.5,6 L -2.5,9 L -2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 4,3 L 3.5,6 L 2.5,9 L 2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 7,3 L 6,6 L 4.5,9 L 4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 10,3 L 8,6 L 6.5,9 L 6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+
+      <!-- Secondary bristles for density -->
+      <path d="M -8.5,3 L -7,6 L -5.5,9 L -5,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M -5.5,3 L -5,6 L -3.5,9 L -3,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M -1,3 L -1,6 L -0.5,9 L 0,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 1,3 L 1,6 L 0.5,9 L 0,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 5.5,3 L 5,6 L 3.5,9 L 3,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 8.5,3 L 7,6 L 5.5,9 L 5,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+
+      <!-- Brown binding band -->
+      <rect x="-7" y="8" width="14" height="6" fill="#654321" rx="1"/>
+
+      <!-- Bottom bristles (legs) -->
+      <path d="M -7,14 L -10,20 L -12,28 L -10,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M -5,14 L -7,20 L -9,28 L -7,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M -3,14 L -4,20 L -6,28 L -4,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 3,14 L 4,20 L 6,28 L 4,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 5,14 L 7,20 L 9,28 L 7,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 7,14 L 10,20 L 12,28 L 10,35" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M -1,14 L -2,20 L -3,28 L -2,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 1,14 L 2,20 L 3,28 L 2,35" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+    </g>
+    <path d="M -3,-34 Q -14,-29 -20,-19" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M -20,-19 L -22,-14" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <g transform="translate(-26, -9)">
+      <!-- Bucket shadow -->
+      <ellipse cx="0" cy="8" rx="10" ry="6" fill="#64748b" opacity="0.3"/>
+
+      <!-- Wooden bucket body with vertical planks -->
+      <path d="M -10,7 L -9,-3 Q -9,-5 0,-5 Q 9,-5 9,-3 L 10,7 Q 10,9 0,9 Q -10,9 -10,7 Z" fill="url(#bucket-returns)"/>
+
+      <!-- Wood planks texture -->
+      <line x1="-7" y1="-3" x2="-8" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="-3" y1="-4" x2="-4" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="0" y1="-5" x2="0" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="3" y1="-4" x2="4" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="7" y1="-3" x2="8" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+
+      <!-- Wooden rim -->
+      <ellipse cx="0" cy="-3" rx="9" ry="2" fill="#94a3b8"/>
+      <ellipse cx="0" cy="-4" rx="9" ry="1" fill="#cbd5e1" opacity="0.6"/>
+
+      <!-- Water surface -->
+      <ellipse cx="0" cy="-1" rx="8" ry="2.5" fill="url(#water-returns)"/>
+
+      <!-- Metal handle -->
+      <path d="M -7,-3 Q 0,-10 7,-3" stroke="#6b7280" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="-7" cy="-3" r="1.2" fill="#4b5563"/>
+      <circle cx="7" cy="-3" r="1.2" fill="#4b5563"/>
+    </g>
+    <path d="M 3,-34 Q 14,-29 20,-19" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 20,-19 L 22,-14" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <g transform="translate(26, -9)">
+      <!-- Bucket shadow -->
+      <ellipse cx="0" cy="8" rx="10" ry="6" fill="#64748b" opacity="0.3"/>
+
+      <!-- Wooden bucket body with vertical planks -->
+      <path d="M -10,7 L -9,-3 Q -9,-5 0,-5 Q 9,-5 9,-3 L 10,7 Q 10,9 0,9 Q -10,9 -10,7 Z" fill="url(#bucket-returns)"/>
+
+      <!-- Wood planks texture -->
+      <line x1="-7" y1="-3" x2="-8" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="-3" y1="-4" x2="-4" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="0" y1="-5" x2="0" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="3" y1="-4" x2="4" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="7" y1="-3" x2="8" y2="7" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+
+      <!-- Wooden rim -->
+      <ellipse cx="0" cy="-3" rx="9" ry="2" fill="#94a3b8"/>
+      <ellipse cx="0" cy="-4" rx="9" ry="1" fill="#cbd5e1" opacity="0.6"/>
+
+      <!-- Water surface -->
+      <ellipse cx="0" cy="-1" rx="8" ry="2.5" fill="url(#water-returns)"/>
+
+      <!-- Metal handle -->
+      <path d="M -7,-3 Q 0,-10 7,-3" stroke="#6b7280" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="-7" cy="-3" r="1.2" fill="#4b5563"/>
+      <circle cx="7" cy="-3" r="1.2" fill="#4b5563"/>
+    </g>
+  </g>
+
+  <!-- Command words floating (the spells/tests that control the magic) -->
+  <g font-family="monospace" font-size="12" fill="#6366f1" opacity="0.7">
+    <text x="50" y="80">expect()</text>
+    <text x="280" y="90">assert()</text>
+    <text x="150" y="100">verify()</text>
+    <text x="320" y="120">test()</text>
+  </g>
+
+  <!-- Gentle, controlled sparkles -->
+  <g opacity="0.6">
+    <circle cx="60" cy="90" r="2" fill="#a78bfa">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="90;86;90" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="290" cy="100" r="2" fill="#a78bfa">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="290;294;290" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="160" cy="110" r="1.5" fill="#c4b5fd">
+      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="110;106;110" dur="3.0s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="330" cy="130" r="1.5" fill="#c4b5fd">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.6s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="330;333;330" dur="3.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="105" r="1.8" fill="#a78bfa">
+      <animate attributeName="opacity" values="0.45;0.85;0.45" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="105;101;105" dur="3.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="240" cy="95" r="1.6" fill="#c4b5fd">
+      <animate attributeName="opacity" values="0.55;0.95;0.55" dur="2.7s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="240;244;240" dur="3.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="115" r="1.4" fill="#a78bfa">
+      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2.3s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="115;111;115" dur="2.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="110" r="1.7" fill="#c4b5fd">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.9s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="350;354;350" dur="3.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Knowledge beams (connecting understanding from sorcerer to brooms) -->
+  <g stroke="#a78bfa" stroke-width="2" opacity="0.5" stroke-dasharray="4,3">
+    <!-- Beam to left broom -->
+    <line x1="182" y1="125" x2="80" y2="185">
+      <animate attributeName="stroke-dashoffset" values="0;7" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <!-- Beam to center broom -->
+    <line x1="200" y1="125" x2="200" y2="188">
+      <animate attributeName="stroke-dashoffset" values="0;7" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2.2s" repeatCount="indefinite"/>
+    </line>
+    <!-- Beam to right broom -->
+    <line x1="218" y1="125" x2="320" y2="186">
+      <animate attributeName="stroke-dashoffset" values="0;7" dur="1.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2.1s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Brighter accent beams for extra flash -->
+  <g stroke="#c4b5fd" stroke-width="1" opacity="0.4" stroke-dasharray="2,2">
+    <line x1="182" y1="125" x2="80" y2="185">
+      <animate attributeName="stroke-dashoffset" values="7;0" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="1.8s" repeatCount="indefinite"/>
+    </line>
+    <line x1="200" y1="125" x2="200" y2="188">
+      <animate attributeName="stroke-dashoffset" values="7;0" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="218" y1="125" x2="320" y2="186">
+      <animate attributeName="stroke-dashoffset" values="7;0" dur="1.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="1.9s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Peaceful, controlled text -->
+  <text x="200" y="35" text-anchor="middle" font-size="18" font-family="system-ui, sans-serif" fill="#6366f1" font-style="italic" opacity="0.8">
+    Understanding brings control 🧙‍♂️
+  </text>
+
+  <text x="200" y="280" text-anchor="middle" font-size="14" font-family="system-ui, sans-serif" fill="#8b5cf6" font-style="italic" opacity="0.7">
+    The magic serves those who know its true name
+  </text>
+</svg>

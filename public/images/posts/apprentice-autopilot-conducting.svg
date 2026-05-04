@@ -1,0 +1,422 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="autopilot-title autopilot-desc">
+  <title id="autopilot-title">Autopilot - The False Confidence</title>
+  <desc id="autopilot-desc">The apprentice (you) stands on a pedestal, eyes closed in blissful autopilot, arms up conducting like an orchestra maestro. Three identical brooms march past in formation, each with arms carrying buckets and their bundle bristles forked into walking legs. The brooms look imposing in their uniformity - they just keep multiplying exactly the same. Sparkles drift lazily as you've stopped paying attention. The scene captures that dangerous moment of false confidence when everything seems to be working on its own and you drift into mindless approval mode.</desc>
+
+  <defs>
+    <linearGradient id="bucket-autopilot" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#94a3b8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#64748b;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="water-autopilot" cx="50%" cy="30%">
+      <stop offset="0%" style="stop-color:#67e8f9;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.9" />
+    </radialGradient>
+  </defs>
+
+  <!-- Dreamy background -->
+  <rect width="400" height="300" fill="#e0f2fe"/>
+  <rect width="400" height="300" fill="#fef3c7" opacity="0.15"/>
+
+  <!-- Chair for apprentice -->
+  <g transform="translate(80, 195)">
+    <!-- Chair seat -->
+    <rect x="-25" y="0" width="50" height="8" fill="#64748b" rx="2"/>
+    <!-- Chair back -->
+    <rect x="-25" y="-40" width="6" height="50" fill="#64748b" rx="2"/>
+    <rect x="-25" y="-40" width="50" height="6" fill="#64748b" rx="2"/>
+    <!-- Chair legs -->
+    <rect x="-22" y="8" width="4" height="30" fill="#475569"/>
+    <rect x="-22" y="35" width="20" height="4" fill="#475569" rx="1"/>
+    <rect x="18" y="8" width="4" height="30" fill="#475569"/>
+    <rect x="2" y="35" width="20" height="4" fill="#475569" rx="1"/>
+  </g>
+
+  <!-- The apprentice (you) - eyes closed, slumped in chair, one arm up conducting -->
+  <g transform="translate(80, 165)">
+    <!-- Body (robes) - slumped posture -->
+    <path d="M -18,20 L -12,-5 L 12,-5 L 18,20 L 16,48 L -16,48 Z" fill="#3b82f6" opacity="0.9"/>
+
+    <!-- Head tilted back -->
+    <circle cx="0" cy="3" r="13" fill="#fde68a" stroke="#3b82f6" stroke-width="1.5"/>
+
+    <!-- Eyes closed (peaceful/asleep) -->
+    <path d="M -5,1 Q -3,3 -1,1" stroke="#1e40af" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M 1,1 Q 3,3 5,1" stroke="#1e40af" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Slight smile of false confidence -->
+    <path d="M -4,7 Q 0,9 4,7" stroke="#1e40af" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Apprentice hat (pointed) tilted slightly - drawn AFTER head so it doesn't cover face -->
+    <g transform="translate(0, -10) rotate(-8)">
+      <path d="M -15,0 L 0,-35 L 15,0 Z" fill="#3b82f6"/>
+      <ellipse cx="0" cy="0" rx="16" ry="5" fill="#3b82f6"/>
+    </g>
+
+    <!-- Right arm limp down -->
+    <path d="M 12,2 Q 18,12 20,28" stroke="#3b82f6" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="21" cy="30" r="3" fill="#fde68a"/>
+
+    <!-- Left arm up conducting (limp/lazy) -->
+    <path d="M -12,2 Q -18,-3 -22,-15" stroke="#3b82f6" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M -22,-15 L -24,-18" stroke="#3b82f6" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="-24" cy="-20" r="3" fill="#fde68a"/>
+  </g>
+
+  <!-- TODO: Bucket sides are gray/metallic — should be brown wood like partial-mastery (use wooden gradient) -->
+  <!-- TODO: Broom at translate(350,205) is drawn after translate(275,210) but visually sits behind it — swap draw order so rightmost broom renders on top -->
+  <!-- Three IDENTICAL marching brooms (imposing uniformity) -->
+  <!-- Broom 1 (left side) -->
+  <g transform="translate(200, 200)">
+    <!-- Handle and arms swivel together -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 0 20; 2 0 20; 0 0 20; -2 0 20; 0 0 20" dur="2.5s" repeatCount="indefinite"/>
+
+      <!-- Broom handle -->
+      <rect x="-4" y="-80" width="8" height="100" fill="#8b4513" rx="3"/>
+
+      <!-- Left arm with bucket -->
+      <g>
+        <path d="M -4,-40 Q -18,-35 -28,-25" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M -28,-25 L -31,-18" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <g transform="translate(-36, -12)">
+          <!-- Bucket shadow -->
+          <ellipse cx="0" cy="8" rx="12" ry="7" fill="#64748b" opacity="0.3"/>
+
+          <!-- Wooden bucket body with vertical planks -->
+          <path d="M -12,8 L -10,-4 Q -10,-6 0,-6 Q 10,-6 10,-4 L 12,8 Q 12,10 0,10 Q -12,10 -12,8 Z" fill="url(#bucket-autopilot)"/>
+
+          <!-- Wood planks texture -->
+          <line x1="-8" y1="-4" x2="-9" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="-4" y1="-5" x2="-5" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="0" y1="-6" x2="0" y2="9" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="4" y1="-5" x2="5" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="8" y1="-4" x2="9" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+
+          <!-- Wooden rim -->
+          <ellipse cx="0" cy="-4" rx="10" ry="2" fill="#94a3b8"/>
+          <ellipse cx="0" cy="-5" rx="10" ry="1" fill="#cbd5e1" opacity="0.6"/>
+
+          <!-- Simple water surface with sloshing -->
+          <ellipse cx="0" cy="-2" rx="9" ry="3" fill="url(#water-autopilot)">
+            <animate attributeName="rx" values="9;8.5;9;9.5;9" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="ry" values="3;3.5;3;2.5;3" dur="2s" repeatCount="indefinite"/>
+          </ellipse>
+
+          <!-- Metal handle -->
+          <path d="M -9,-4 Q 0,-12 9,-4" stroke="#6b7280" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="-9" cy="-4" r="1.5" fill="#4b5563"/>
+          <circle cx="9" cy="-4" r="1.5" fill="#4b5563"/>
+        </g>
+      </g>
+
+      <!-- Right arm with bucket -->
+      <g>
+        <path d="M 4,-40 Q 18,-35 28,-25" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M 28,-25 L 31,-18" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <g transform="translate(36, -12)">
+          <!-- Bucket shadow -->
+          <ellipse cx="0" cy="8" rx="12" ry="7" fill="#64748b" opacity="0.3"/>
+
+          <!-- Wooden bucket body with vertical planks -->
+          <path d="M -12,8 L -10,-4 Q -10,-6 0,-6 Q 10,-6 10,-4 L 12,8 Q 12,10 0,10 Q -12,10 -12,8 Z" fill="url(#bucket-autopilot)"/>
+
+          <!-- Wood planks texture -->
+          <line x1="-8" y1="-4" x2="-9" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="-4" y1="-5" x2="-5" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="0" y1="-6" x2="0" y2="9" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="4" y1="-5" x2="5" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="8" y1="-4" x2="9" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+
+          <!-- Wooden rim -->
+          <ellipse cx="0" cy="-4" rx="10" ry="2" fill="#94a3b8"/>
+          <ellipse cx="0" cy="-5" rx="10" ry="1" fill="#cbd5e1" opacity="0.6"/>
+
+          <!-- Simple water surface with sloshing (opposite phase) -->
+          <ellipse cx="0" cy="-2" rx="9" ry="3" fill="url(#water-autopilot)">
+            <animate attributeName="rx" values="9;9.5;9;8.5;9" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="ry" values="3;2.5;3;3.5;3" dur="2s" repeatCount="indefinite"/>
+          </ellipse>
+
+          <!-- Metal handle -->
+          <path d="M -9,-4 Q 0,-12 9,-4" stroke="#6b7280" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="-9" cy="-4" r="1.5" fill="#4b5563"/>
+          <circle cx="9" cy="-4" r="1.5" fill="#4b5563"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- Besom bundle (complete structure) -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 0 11; -3 0 11; 0 0 11; 3 0 11; 0 0 11" dur="2.5s" repeatCount="indefinite"/>
+
+      <!-- Top bristles extending above binding band, tapering inward -->
+      <path d="M -10,3 L -8,6 L -6.5,9 L -6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M -7,3 L -6,6 L -4.5,9 L -4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M -4,3 L -3.5,6 L -2.5,9 L -2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 4,3 L 3.5,6 L 2.5,9 L 2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 7,3 L 6,6 L 4.5,9 L 4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 10,3 L 8,6 L 6.5,9 L 6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+
+      <!-- Secondary bristles for density -->
+      <path d="M -8.5,3 L -7,6 L -5.5,9 L -5,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M -5.5,3 L -5,6 L -3.5,9 L -3,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M -1,3 L -1,6 L -0.5,9 L 0,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 1,3 L 1,6 L 0.5,9 L 0,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 5.5,3 L 5,6 L 3.5,9 L 3,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 8.5,3 L 7,6 L 5.5,9 L 5,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+
+      <!-- Brown binding band (cinches the bristles) -->
+      <rect x="-7" y="8" width="14" height="6" fill="#654321" rx="1"/>
+
+      <!-- Bottom bristles (forked into walking legs) -->
+      <path d="M -7,14 L -10,20 L -13,30 L -11,40" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M -5,14 L -8,20 L -10,30 L -8,40" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M -3,14 L -5,20 L -7,30 L -5,40" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 3,14 L 5,20 L 7,30 L 5,40" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 5,14 L 8,20 L 10,30 L 8,40" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 7,14 L 10,20 L 13,30 L 11,40" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M -1,14 L -2,20 L -3,30 L -2,40" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 1,14 L 2,20 L 3,30 L 2,40" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+    </g>
+  </g>
+
+  <!-- Broom 2 (center) - IDENTICAL -->
+  <g transform="translate(275, 210)">
+    <!-- Handle and arms swivel together -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 0 20; 2 0 20; 0 0 20; -2 0 20; 0 0 20" dur="2.5s" begin="0.3s" repeatCount="indefinite"/>
+
+      <!-- Broom handle -->
+      <rect x="-4" y="-80" width="8" height="100" fill="#8b4513" rx="3"/>
+
+      <!-- Left arm with bucket -->
+      <g>
+        <path d="M -4,-40 Q -18,-35 -28,-25" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M -28,-25 L -31,-18" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <g transform="translate(-36, -12)">
+      <ellipse cx="0" cy="8" rx="12" ry="7" fill="#64748b" opacity="0.3"/>
+      <path d="M -12,8 L -10,-4 Q -10,-6 0,-6 Q 10,-6 10,-4 L 12,8 Q 12,10 0,10 Q -12,10 -12,8 Z" fill="url(#bucket-autopilot)"/>
+      <line x1="-8" y1="-4" x2="-9" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="-4" y1="-5" x2="-5" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="0" y1="-6" x2="0" y2="9" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="4" y1="-5" x2="5" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="8" y1="-4" x2="9" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <ellipse cx="0" cy="-4" rx="10" ry="2" fill="#94a3b8"/>
+      <ellipse cx="0" cy="-5" rx="10" ry="1" fill="#cbd5e1" opacity="0.6"/>
+      <ellipse cx="0" cy="-2" rx="9" ry="3" fill="url(#water-autopilot)">
+        <animate attributeName="rx" values="9;8.5;9;9.5;9" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="3;3.5;3;2.5;3" dur="2s" repeatCount="indefinite"/>
+      </ellipse>
+      <path d="M -9,-4 Q 0,-12 9,-4" stroke="#6b7280" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="-9" cy="-4" r="1.5" fill="#4b5563"/>
+      <circle cx="9" cy="-4" r="1.5" fill="#4b5563"/>
+    </g>
+      </g>
+
+      <!-- Right arm with bucket -->
+      <g>
+        <path d="M 4,-40 Q 18,-35 28,-25" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M 28,-25 L 31,-18" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <g transform="translate(36, -12)">
+      <ellipse cx="0" cy="8" rx="12" ry="7" fill="#64748b" opacity="0.3"/>
+      <path d="M -12,8 L -10,-4 Q -10,-6 0,-6 Q 10,-6 10,-4 L 12,8 Q 12,10 0,10 Q -12,10 -12,8 Z" fill="url(#bucket-autopilot)"/>
+      <line x1="-8" y1="-4" x2="-9" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="-4" y1="-5" x2="-5" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="0" y1="-6" x2="0" y2="9" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="4" y1="-5" x2="5" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <line x1="8" y1="-4" x2="9" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+      <ellipse cx="0" cy="-4" rx="10" ry="2" fill="#94a3b8"/>
+      <ellipse cx="0" cy="-5" rx="10" ry="1" fill="#cbd5e1" opacity="0.6"/>
+      <ellipse cx="0" cy="-2" rx="9" ry="3" fill="url(#water-autopilot)">
+        <animate attributeName="rx" values="9;9.5;9;8.5;9" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="3;2.5;3;3.5;3" dur="2s" repeatCount="indefinite"/>
+      </ellipse>
+      <path d="M -9,-4 Q 0,-12 9,-4" stroke="#6b7280" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="-9" cy="-4" r="1.5" fill="#4b5563"/>
+      <circle cx="9" cy="-4" r="1.5" fill="#4b5563"/>
+    </g>
+      </g>
+    </g>
+
+    <!-- Besom bundle (complete structure) -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 0 11; -3 0 11; 0 0 11; 3 0 11; 0 0 11" dur="2.5s" begin="0.3s" repeatCount="indefinite"/>
+
+      <!-- Top bristles extending ABOVE the binding band -->
+      <!-- Slanting inward from wide at top to narrow at cinch -->
+      <path d="M -10,3 L -8,6 L -6.5,9 L -6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M -7,3 L -6,6 L -4.5,9 L -4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M -4,3 L -3.5,6 L -2.5,9 L -2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 4,3 L 3.5,6 L 2.5,9 L 2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 7,3 L 6,6 L 4.5,9 L 4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 10,3 L 8,6 L 6.5,9 L 6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+
+      <!-- Add more bristles for density -->
+      <path d="M -8.5,3 L -7,6 L -5.5,9 L -5,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M -5.5,3 L -5,6 L -3.5,9 L -3,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M -1,3 L -1,6 L -0.5,9 L 0,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 1,3 L 1,6 L 0.5,9 L 0,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 5.5,3 L 5,6 L 3.5,9 L 3,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 8.5,3 L 7,6 L 5.5,9 L 5,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+
+      <!-- Brown binding band (cinches the bristles) - NARROWER now -->
+      <rect x="-7" y="8" width="14" height="6" fill="#654321" rx="1"/>
+
+      <!-- Bottom bristles (forked into walking legs) - adjusted to match narrower cinch -->
+      <!-- Left leg group - starting narrower at y=19 -->
+      <path d="M -7,14 L -10,20 L -13,30 L -11,40" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M -5,14 L -8,20 L -10,30 L -8,40" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M -3,14 L -5,20 L -7,30 L -5,40" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+
+      <!-- Right leg group -->
+      <path d="M 3,14 L 5,20 L 7,30 L 5,40" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 5,14 L 8,20 L 10,30 L 8,40" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 7,14 L 10,20 L 13,30 L 11,40" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+
+      <!-- Middle bristles -->
+      <path d="M -1,14 L -2,20 L -3,30 L -2,40" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 1,14 L 2,20 L 3,30 L 2,40" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+    </g>
+  </g>
+
+  <!-- Broom 3 (right, slightly behind) - IDENTICAL -->
+  <g transform="translate(350, 205)">
+    <!-- Handle and arms swivel together -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 0 20; 2 0 20; 0 0 20; -2 0 20; 0 0 20" dur="2.5s" begin="0.6s" repeatCount="indefinite"/>
+
+      <!-- Broom handle -->
+      <rect x="-4" y="-80" width="8" height="100" fill="#8b4513" rx="3"/>
+
+      <!-- Left arm with bucket -->
+      <g>
+        <path d="M -4,-40 Q -18,-35 -28,-25" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M -28,-25 L -31,-18" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <g transform="translate(-36, -12)">
+          <ellipse cx="0" cy="8" rx="12" ry="7" fill="#64748b" opacity="0.3"/>
+          <path d="M -12,8 L -10,-4 Q -10,-6 0,-6 Q 10,-6 10,-4 L 12,8 Q 12,10 0,10 Q -12,10 -12,8 Z" fill="url(#bucket-autopilot)"/>
+          <line x1="-8" y1="-4" x2="-9" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="-4" y1="-5" x2="-5" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="0" y1="-6" x2="0" y2="9" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="4" y1="-5" x2="5" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="8" y1="-4" x2="9" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <ellipse cx="0" cy="-4" rx="10" ry="2" fill="#94a3b8"/>
+          <ellipse cx="0" cy="-5" rx="10" ry="1" fill="#cbd5e1" opacity="0.6"/>
+          <ellipse cx="0" cy="-2" rx="9" ry="3" fill="url(#water-autopilot)">
+            <animate attributeName="rx" values="9;8.5;9;9.5;9" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="ry" values="3;3.5;3;2.5;3" dur="2s" repeatCount="indefinite"/>
+          </ellipse>
+          <path d="M -9,-4 Q 0,-12 9,-4" stroke="#6b7280" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="-9" cy="-4" r="1.5" fill="#4b5563"/>
+          <circle cx="9" cy="-4" r="1.5" fill="#4b5563"/>
+        </g>
+      </g>
+
+      <!-- Right arm with bucket -->
+      <g>
+        <path d="M 4,-40 Q 18,-35 28,-25" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M 28,-25 L 31,-18" stroke="#8b4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <g transform="translate(36, -12)">
+          <ellipse cx="0" cy="8" rx="12" ry="7" fill="#64748b" opacity="0.3"/>
+          <path d="M -12,8 L -10,-4 Q -10,-6 0,-6 Q 10,-6 10,-4 L 12,8 Q 12,10 0,10 Q -12,10 -12,8 Z" fill="url(#bucket-autopilot)"/>
+          <line x1="-8" y1="-4" x2="-9" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="-4" y1="-5" x2="-5" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="0" y1="-6" x2="0" y2="9" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="4" y1="-5" x2="5" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="8" y1="-4" x2="9" y2="8" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+          <ellipse cx="0" cy="-4" rx="10" ry="2" fill="#94a3b8"/>
+          <ellipse cx="0" cy="-5" rx="10" ry="1" fill="#cbd5e1" opacity="0.6"/>
+          <ellipse cx="0" cy="-2" rx="9" ry="3" fill="url(#water-autopilot)">
+            <animate attributeName="rx" values="9;9.5;9;8.5;9" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="ry" values="3;2.5;3;3.5;3" dur="2s" repeatCount="indefinite"/>
+          </ellipse>
+          <path d="M -9,-4 Q 0,-12 9,-4" stroke="#6b7280" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="-9" cy="-4" r="1.5" fill="#4b5563"/>
+          <circle cx="9" cy="-4" r="1.5" fill="#4b5563"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- Besom bundle (complete structure) -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 0 11; -3 0 11; 0 0 11; 3 0 11; 0 0 11" dur="2.5s" begin="0.6s" repeatCount="indefinite"/>
+
+      <!-- Top bristles extending ABOVE the binding band -->
+      <!-- Slanting inward from wide at top to narrow at cinch -->
+      <path d="M -10,3 L -8,6 L -6.5,9 L -6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M -7,3 L -6,6 L -4.5,9 L -4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M -4,3 L -3.5,6 L -2.5,9 L -2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 4,3 L 3.5,6 L 2.5,9 L 2,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 7,3 L 6,6 L 4.5,9 L 4,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1.2"/>
+      <path d="M 10,3 L 8,6 L 6.5,9 L 6,14" fill="#daa520" stroke="#b8860b" stroke-width="1.2"/>
+
+      <!-- Add more bristles for density -->
+      <path d="M -8.5,3 L -7,6 L -5.5,9 L -5,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M -5.5,3 L -5,6 L -3.5,9 L -3,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M -1,3 L -1,6 L -0.5,9 L 0,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 1,3 L 1,6 L 0.5,9 L 0,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 5.5,3 L 5,6 L 3.5,9 L 3,14" fill="#daa520" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+      <path d="M 8.5,3 L 7,6 L 5.5,9 L 5,14" fill="#cd9a1b" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+
+      <!-- Brown binding band (cinches the bristles) - NARROWER now -->
+      <rect x="-7" y="8" width="14" height="6" fill="#654321" rx="1"/>
+
+      <!-- Bottom bristles (forked into walking legs) - adjusted to match narrower cinch -->
+      <!-- Left leg group - starting narrower at y=19 -->
+      <path d="M -7,14 L -10,20 L -13,30 L -11,40" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M -5,14 L -8,20 L -10,30 L -8,40" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M -3,14 L -5,20 L -7,30 L -5,40" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+
+      <!-- Right leg group -->
+      <path d="M 3,14 L 5,20 L 7,30 L 5,40" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 5,14 L 8,20 L 10,30 L 8,40" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 7,14 L 10,20 L 13,30 L 11,40" fill="#daa520" stroke="#b8860b" stroke-width="0.8"/>
+
+      <!-- Middle bristles -->
+      <path d="M -1,14 L -2,20 L -3,30 L -2,40" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+      <path d="M 1,14 L 2,20 L 3,30 L 2,40" fill="#cd9a1b" stroke="#b8860b" stroke-width="0.8"/>
+    </g>
+  </g>
+
+
+  <!-- Lazy, dreamy sparkles (autopilot mode) -->
+  <g opacity="0.5">
+    <circle cx="120" cy="60" r="2" fill="#fbbf24">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="60;55;60" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="100" r="2" fill="#fbbf24">
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="180;185;180" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="80" r="1.5" fill="#fde047">
+      <animate attributeName="opacity" values="0.4;0.7;0.4" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="80;76;80" dur="4.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="90" r="1.5" fill="#fde047">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="320;324;320" dur="3.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="75" r="2.2" fill="#fbbf24">
+      <animate attributeName="opacity" values="0.35;0.65;0.35" dur="3.3s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="75;70;75" dur="4.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="210" cy="95" r="1.8" fill="#fde047">
+      <animate attributeName="opacity" values="0.45;0.75;0.45" dur="3.6s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="210;214;210" dur="4.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="70" r="1.6" fill="#fbbf24">
+      <animate attributeName="opacity" values="0.4;0.7;0.4" dur="3.4s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="70;66;70" dur="3.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="105" r="1.4" fill="#fde047">
+      <animate attributeName="opacity" values="0.35;0.65;0.35" dur="3.1s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="350;353;350" dur="4.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Dreamy text -->
+  <text x="200" y="35" text-anchor="middle" font-size="16" font-family="system-ui, sans-serif" fill="#0369a1" font-style="italic" opacity="0.8">
+    Everything's working perfectly... 😌
+  </text>
+</svg>

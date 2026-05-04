@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="feedback-loop-title feedback-loop-desc">
+  <title id="feedback-loop-title">AI and Testing Feedback Loop Diagram</title>
+  <desc id="feedback-loop-desc">A circular diagram showing the positive feedback loop between AI tools and smart testing. The cycle shows: You write exemplary tests → AI generates comprehensive coverage → Tests fail with clear output → AI auto-fixes issues → You refactor confidently, which loops back to writing more tests. Arrows labeled "10x multiplier" connect each step.</desc>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#3b82f6" />
+    </marker>
+  </defs>
+
+  <!-- Central circle with "10x" -->
+  <circle cx="300" cy="200" r="60" fill="#3b82f6" opacity="0.1" stroke="#3b82f6" stroke-width="2"/>
+  <text x="300" y="200" text-anchor="middle" dominant-baseline="middle" font-size="32" font-weight="bold" fill="#3b82f6">10x</text>
+  <text x="300" y="225" text-anchor="middle" dominant-baseline="middle" font-size="14" fill="#3b82f6">multiplier</text>
+
+  <!-- Step 1: You write tests (top) -->
+  <rect x="200" y="30" width="200" height="60" rx="8" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="2"/>
+  <text x="300" y="55" text-anchor="middle" font-size="14" font-weight="bold" fill="#059669">You write</text>
+  <text x="300" y="73" text-anchor="middle" font-size="14" fill="#059669">2-3 exemplary tests</text>
+
+  <!-- Arrow 1 to 2 -->
+  <path d="M 398 82 Q 450 120, 455 170" fill="none" stroke="#3b82f6" stroke-width="3" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 2: AI generates (right) -->
+  <rect x="460" y="170" width="130" height="60" rx="8" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="525" y="195" text-anchor="middle" font-size="14" font-weight="bold" fill="#7c3aed">AI generates</text>
+  <text x="525" y="213" text-anchor="middle" font-size="14" fill="#7c3aed">coverage</text>
+
+  <!-- Arrow 2 to 3 -->
+  <path d="M 475 230 Q 410 290, 338 320" fill="none" stroke="#3b82f6" stroke-width="3" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 3: Tests fail (bottom) -->
+  <rect x="180" y="320" width="160" height="60" rx="8" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2"/>
+  <text x="260" y="345" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc2626">Tests fail</text>
+  <text x="260" y="363" text-anchor="middle" font-size="14" fill="#dc2626">with clear output</text>
+
+  <!-- Arrow 3 to 4 -->
+  <path d="M 182 348 Q 100 290, 105 230" fill="none" stroke="#3b82f6" stroke-width="3" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 4: AI fixes (left) -->
+  <rect x="10" y="170" width="130" height="60" rx="8" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="2"/>
+  <text x="75" y="195" text-anchor="middle" font-size="14" font-weight="bold" fill="#d97706">AI auto-fixes</text>
+  <text x="75" y="213" text-anchor="middle" font-size="14" fill="#d97706">in seconds</text>
+
+  <!-- Arrow 4 to 1 -->
+  <path d="M 125 172 Q 180 110, 242 88" fill="none" stroke="#3b82f6" stroke-width="3" marker-end="url(#arrowhead)"/>
+</svg>
